@@ -1,0 +1,112 @@
+.sendmailContainer {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    background: #FFFFFF;
+    box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 30px;
+
+    top: 100px;
+    height: 200px;
+    width: 500px;
+    position: absolute;
+    top: 40%;
+    left: 230px;
+    z-index: 999;
+    transform: translate(0px, 0px);
+    transition: 500ms;
+}
+
+
+.sendmailContainer-hidden {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    background: #FFFFFF;
+    box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 30px;
+
+    top: 100px;
+    height: 200px;
+    width: 500px;
+    position: absolute;
+    top: 40%;
+    left: 230px;
+    z-index: 999;
+    transform: translate(2500px, 0px);
+    transition: 500ms;
+}
+
+.invitPopUp-label {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+}
+
+#email {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    height: 35px;
+    width: 210px;
+    border-radius: 10px;
+    padding-left: 15px;
+    padding-right: 15px;
+    font-size: 16px;
+}
+
+.invitePopUp-sumitBtn {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    height: 40px;
+    width: 100px;
+    border-radius: 10px;
+    background-color: #0F3D8B;
+    cursor: pointer;
+    font-size: 16px;
+    color: white;
+}
+
+.invitePopUp-sumitBtn:hover {
+    background-color: #018AC5;
+}
+
+.invitePopUp-close{
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    cursor: pointer;
+}
+
+.invitePopUp-close:hover{
+    background-color: lightgrey;
+}
+
+@media(max-width:800px) {
+    .sendmailContainer {
+        left: 5px;
+        flex-direction: column;
+        height: 180px;
+        width: 260px;
+    }
+
+    #email{
+        box-sizing: border-box;
+        width: 96%;
+    }
+
+    .invitePopUp-sumitBtn{
+        box-sizing: border-box;
+        width: 96%;
+    }
+}

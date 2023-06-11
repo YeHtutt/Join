@@ -1,0 +1,46 @@
+body{
+    background-color: #F6F7F8;
+}
+
+.legal {
+    margin-left: 355px;
+    margin-top: 180px;
+    font-size: 61px;
+}
+
+.subtitle {
+    margin-left: 347px;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 27px;
+    line-height: 120%;
+}
+
+.lorem {
+    margin-left: 347px;
+    margin-right: 115px;
+}
+
+@media(max-width: 800px) {
+    .legal {
+        margin-left: 30px;
+    }
+
+    .subtitle {
+        position: inherit;
+        margin-left: 30px;
+    }
+
+    .lorem {
+        margin-left: 30px;
+    }
+    
+    .padding{
+        padding-bottom: 80px;
+    }
+
+    .display-unset{
+        display: none;
+    }
+}

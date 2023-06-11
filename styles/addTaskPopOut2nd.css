@@ -1,0 +1,404 @@
+.newCategoryInput {
+    width: 50px;
+    height: 51px;
+    padding-left: 35px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    gap: 10px;
+    display: none;
+}
+
+.newAssignToInput {
+    width: 50px;
+    height: 51px;
+    padding-left: 35px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    gap: 10px;
+    display: none;
+}
+
+.newCategoryInput img,
+.newAssignToInput img {
+    width: 16px;
+    height: 16px;
+}
+
+.newCategoryColorsBox {
+    width: 422px;
+    height: 51px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    display: none;
+}
+
+.assignContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0px;
+    width: 422px;
+}
+
+.circleContactsContainer {
+    box-sizing: border-box;
+    width: 100%;
+    height: 70px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.circleContact {
+    font-weight: 500;
+    display: flex;
+    width: 50px;
+    height: 50px;
+    border-radius: 100%;
+    background-color: rebeccapurple;
+    align-items: center;
+    font-size: 28px;
+    justify-content: center;
+    color: whitesmoke;
+}
+
+.date {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 21px;
+    line-height: 120%;
+    color: #000000;
+}
+
+.dateInputField {
+    box-sizing: border-box;
+    height: 51px;
+    background: #FFFFFF;
+    border: 1px solid #D1D1D1;
+    border-radius: 10px;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 21px;
+    line-height: 120%;
+    color: #000000;
+    padding-left: 21px;
+    padding-right: 21px;
+}
+input[type=date]:invalid::-webkit-datetime-edit {color: #D1D1D1;}
+
+.d-column {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    width: 422px;
+}
+
+.prioContainer{
+    display: flex;
+    flex-direction: column;
+    width: 422px;
+}
+
+.priority {
+    height: 25px;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 21px;
+    line-height: 120%;
+    color: #000000;
+}
+
+.priorityBoxesContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 0px;
+    gap: 10px;
+    height: 61px;
+}
+
+.prioUrgentBox,
+.prioMediumBox,
+.prioLowBox {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    width: 136px;
+    height: 51px;
+    background: #FFFFFF;
+    box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
+.prioUrgentBox:hover,
+.prioMediumBox:hover,
+.prioLowBox:hover {
+    transform: scale(1.1);
+}
+
+.subtasks {
+    width: 92px;
+    height: 25px;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 21px;
+    line-height: 120%;
+    color: #000000;
+    margin-top: 34px;
+}
+
+
+.addSubtaskContainer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    isolation: isolate;
+    width: 422px;
+    height: 51px;
+    background: #FFFFFF;
+    border: 1px solid #D1D1D1;
+    box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
+.subtaskOninput {
+    width: 50px;
+    height: 51px;
+    padding-right: 20px;
+    padding-left: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    cursor: pointer;
+    gap: 10px;
+    display: none;
+}
+
+.subtaskOninput img {
+    width: 16px;
+    height: 16px;
+}
+
+.line {
+    box-sizing: border-box;
+    margin-left: 5px;
+    margin-right: 5px;
+    width: 0px;
+    height: 70%;
+    border: 1px solid #D1D1D1;
+}
+
+.subtasksInput {
+    margin-left: 21px;
+    outline: none;
+    border: none;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 21px;
+    line-height: 120%;
+}
+
+.subtasksInput::placeholder {
+    width: 178px;
+    height: 25px;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 21px;
+    line-height: 120%;
+    color: #D1D1D1;
+}
+
+.addSubtaskBtn {
+    margin-right: 21px;
+}
+
+
+
+.bgUrgent { background-color: #FF3D00;}
+
+.bgMedium { background-color: #FFA800;}
+
+.bgLow {background-color: #7AE229;}
+
+.bgTextWhite {color: white;}
+
+.Img-white {filter: brightness(0) invert(1);}
+
+.messageAddedTask {
+    position: absolute;
+    left: 50%;
+    bottom: 20%;
+    transform: translate(-50%, -50%);
+    background-color: #2A3647;
+    width: 326px;
+    height: 74px;
+    box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.15);
+    border-radius: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 0px;
+    display: none;
+    z-index: 3;
+}
+
+.messageAddedTask p {
+    width: 235px;
+    height: 24px;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 21px;
+    line-height: 120%;
+    color: #FFFFFF;
+}
+
+.messageAddedTask img {
+    width: 22px;
+    height: 26px;
+    transform: rotate(-180deg);
+}
+
+.whitecolor {
+    filter: invert(0%) sepia(100%) saturate(0%) hue-rotate(21deg) brightness(97%) contrast(103%);
+}
+/*Check Mark design*/
+.container {
+    position: relative;
+    padding-left: 40px;
+    margin-bottom: 8px;
+    cursor: pointer;
+    font-size: 19px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    display: flex;
+    flex-direction: row;
+    align-items: top;
+}
+.container input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+.checkmark {
+    position: absolute;
+    top: 2;
+    left: 0;
+    height: 16px;
+    width: 16px;
+    background-color: #F4F4F4;
+    border: 1px solid black;
+    border-radius: 3px;
+}
+.container input:checked~.checkmark {
+    background-color: #f4f4f4F4;
+}
+.checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+.container input:checked~.checkmark:after {
+    display: block;
+}
+.container .checkmark:after {
+    left: 6px;
+    top: 2px;
+    width: 2px;
+    height: 9px;
+    border: solid black;
+    border-width: 0 3px 3px 0;
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+.filledCheckboxContainer {
+    position: relative;
+    padding-left: 20px;
+    margin-bottom: 8px;
+    cursor: pointer;
+    font-size: 19px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    display: flex;
+    flex-direction: row;
+    align-items: top;
+}
+.filledCheckboxContainer input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+.checkmark {
+    position: absolute;
+    top: 2;
+    left: 0;
+    height: 16px;
+    width: 16px;
+    background-color: #F4F4F4;
+    border: 1px solid black;
+    border-radius: 3px;
+}
+.filledCheckboxContainer input:checked~.checkmark {background-color: #f4f4f4F4;}
+.checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+.filledCheckboxContainer input:checked~.checkmark:after {display: block;}
+.filledCheckboxContainer .checkmark:after {
+    left: 3px;
+    top: 3px;
+    width: 4px;
+    height: 4px;
+    border: solid black;
+    border-width: 3px 3px 3px 3px;
+    background: black;
+}
+
+.newContactImg {
+    margin-bottom: 8px;
+    cursor: pointer;
+    filter: invert(100%) sepia(76%) saturate(129%) hue-rotate(332deg) brightness(111%) contrast(101%);
+    width: 23px;
+    height: 23px;
+}
+@keyframes fadeOut {
+    from {opacity: 1;}
+    to {opacity: 0;}
+}
+.animate {animation: 4s fadeOut ease-in-out;}
+.buttonDisabled {pointer-events: none;}
+.buttonEnabled {pointer-events: auto;}
+
+#bg {
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.5);
+    top: 0px ;
+    bottom: 0px;
+    right: 0px;
+    left: 0px;
+    z-index: 13;
+}

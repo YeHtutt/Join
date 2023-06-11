@@ -1,0 +1,443 @@
+@media(max-width:800px) {
+    #bg {
+        display: none;
+    }
+
+    .contentContainer {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        height: 766.98px;
+        height: auto;
+        margin-left: 33px;
+        margin-top: 0px;
+        position: relative;
+    }
+
+    .SubtaskAppendixContainer {
+        box-sizing: border-box;
+        width: 100%;
+        height: auto;
+        padding-bottom: 60px;
+    }
+
+    .topBoxLeft {
+        width: 330px;
+    }
+
+    .titleContainer {
+        height: 68px !important;
+    }
+
+    .descriptionContainer {
+        height: 120px;
+        padding-top: 9px;
+    }
+
+    #description {
+        height: 93px;
+    }
+
+    .topBoxRight {
+        width: 330px;
+    }
+
+    .d-column {
+        margin-top: 14px;
+    }
+
+    .prioContainer {
+        padding-top: 9px !important;
+    }
+
+    .priorityBoxesContainer {
+        height: auto !important;
+        padding-top: 13px !important;
+        display: flex !important;
+        flex-direction: column-reverse !important;
+        justify-content: center !important;
+        align-items: center !important;
+        padding: 0px !important;
+        gap: 10px !important;
+    }
+
+    .dateInputField {
+        height: 41px !important;
+    }
+
+    .priority {
+        margin-top: 9px;
+    }
+
+    .bottomBoxRight {
+        display: flex;
+        flex-direction: column;
+        margin-left: 0;
+        gap: 8px;
+    }
+
+    .bottomBoxLeft {
+        width: 330px;
+    }
+
+    .input {
+        width: 207px !important;
+    }
+
+    .newCategoryInput {
+        padding-left: 2px;
+    }
+
+    .newCategoryColorsBox {
+        width: 363px !important;
+    }
+
+    .assignContainer {
+        padding-top: 9px !important;
+    }
+
+    .buttonOpenCloseCategory {
+        padding-left: 60px;
+    }
+
+    .buttonOpenClose {
+        padding-left: 38px;
+    }
+
+    .contactInputContainer {
+        height: 41px !important;
+    }
+
+    .newContactImg {
+        padding-left: 0px;
+    }
+
+    .assignInput {
+        width: 220px;
+    }
+
+    .midLine {
+        display: none;
+    }
+
+    .bottomBoxRight {
+        width: 330px;
+        margin-top: -30px !important;
+        padding-bottom: 140px;
+    }
+
+    .inputContainer {
+        width: 363px;
+        height: 41px !important;
+    }
+
+    .newAssignToInput {
+        padding-left: 0px;
+    }
+
+
+    .addSubtaskContainer {
+        margin-top: 9px;
+        height: 41px !important;
+    }
+
+    .subtasksInput {
+        margin-left: 20px !important;
+        font-size: 18px !important;
+    }
+
+    .date {
+        padding-bottom: 8px;
+    }
+
+    .buttonsContainer {
+        width: auto;
+        display: none;
+    }
+
+    .createButton {
+        display: none;
+    }
+
+    .createButtonResponsiveContainer {
+        display: flex;
+        justify-content: center;
+        height: 51px;
+        width: 100%;
+        border: none;
+        z-index: 91 !important;
+    }
+
+    .createButtonResponsiveContainer div {
+        width: 330px;
+        height: 51px;
+        display: flex;
+        justify-content: flex-end;
+        border: none;
+        z-index: 91 !important;
+    }
+
+    .createButtonResponsive {
+        font-family: 'Inter';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 21px;
+        line-height: 120%;
+        color: #FFFFFF;
+        background: #2A3647;
+        border-radius: 10px;
+        width: 124px;
+        z-index: 91 !important;
+    }
+
+    .createButtonResponsive:hover {
+        border: none;
+        background-color: #29ABE2;
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+        z-index: 91;
+    }
+
+    .createButtonResponsive:active {
+        background-color: #091931;
+        z-index: 91;
+    }
+
+    .clearButtonImgblue {
+        filter: invert(76%) sepia(51%) saturate(1615%) hue-rotate(168deg) brightness(92%) contrast(92%);
+    }
+
+    .clearButtonImgGray {
+        filter: invert(41%) sepia(6%) saturate(1189%) hue-rotate(179deg) brightness(92%) contrast(84%);
+    }
+
+    .clearButton {
+        display: none;
+    }
+
+    .KanbanResponsive {
+        display: flex;
+        box-sizing: border-box;
+        width: 80vw;
+        justify-content: flex-start;
+        position: absolute;
+        top: 25px;
+        padding-left: 0px;
+        font-family: 'Inter';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 120%;
+        color: #000000;
+    }
+
+    .subtaskOninput {
+        width: 0px !important;
+        padding-right: 6px !important;
+    }
+
+}
+
+@media(max-width:400px) {
+    .contentContainer {
+        padding-left: 0px;
+        padding-right: 0px;
+    }
+
+    .headline {
+        width: 290px !important;
+    }
+
+    .topBoxLeft {
+        width: 290px;
+    }
+
+    .topBoxRight {
+        width: 290px;
+    }
+
+    .bottomBoxLeft {
+        width: 290px;
+    }
+
+    .bottomBoxRight {
+        width: 290px;
+    }
+
+    .assignedList {
+        padding-right: 6px !important;
+    }
+
+    .inputContainer,
+    .contactInputContainer,
+    .dateInputField,
+    #title,
+    #description,
+    .addSubtaskContainer {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    .input {
+        font-size: 18px !important;
+        width: 177px !important;
+    }
+
+    .buttonOpenClose {
+        padding-left: 2px;
+    }
+
+    .assignInput {
+        margin-left: 0px !important;
+        font-size: 18px;
+        width: 204px;
+    }
+
+    .subtasksInput {
+        width: 238px !important;
+        margin-left: 0px !important;
+    }
+
+    .subtaskOninput {
+        width: 15px !important;
+        gap: 8px !important;
+        padding-left: 0px !important;
+    }
+
+    .newCategoryInput {
+        width: 57px !important;
+        padding-left: 0px !important;
+        gap: 8px !important;
+    }
+
+    .newCategoryColorsBox {
+        width: 290px !important;
+    }
+
+    .color {
+        width: 13px;
+        height: 13px;
+    }
+
+    .newAssignToInput {
+        width: 59px !important;
+        gap: 8px !important;
+        padding-left: 0px !important;
+    }
+}
+
+@media(max-width:300px) {
+    .createButtonResponsiveContainer {
+        width: 88%;
+    }
+
+    .createButtonResponsiveContainer div {
+        width: 240px;
+    }
+
+    .headline {
+        font-size: 30px;
+        width: 240px !important;
+    }
+
+    .topBoxLeft {
+        width: 240px;
+    }
+
+    .topBoxRight {
+        width: 240px;
+    }
+
+    .bottomBoxLeft {
+        width: 240px;
+    }
+
+    .bottomBoxRight {
+        width: 240px;
+    }
+
+    .input {
+        font-size: 15px !important;
+        width: 150px !important;
+    }
+
+    .assignInput {
+        font-size: 15px;
+        width: 160px;
+    }
+
+    .subtaskOninput {
+        gap: 3px !important;
+        padding-left: 10px !important;
+    }
+
+    .subtasksInput {
+        font-size: 15px !important;
+        width: 193px !important;
+    }
+
+    .subtasksInput::placeholder,
+    #title::placeholder,
+    #description::placeholder {
+        font-size: 16px !important;
+    }
+
+    .assignedList {
+        padding-right: 1px !important;
+    }
+
+    .dateInputField {
+        font-size: 18px;
+    }
+
+    .newCategoryColorsBox {
+        width: 240px !important;
+    }
+
+    .inputContainer,
+    .contactInputContainer,
+    .dateInputField,
+    #title,
+    #description,
+    .addSubtaskContainer {
+        padding-left: 0px;
+    }
+
+    .color {
+        margin-left: 0px;
+        margin-right: 0px;
+    }
+
+    .newCategoryInput {
+        width: 45px !important;
+        padding-left: 11px !important;
+        gap: 3px !important;
+    }
+
+    #title,
+    #description {
+        font-size: 16px;
+    }
+
+    .newAssignToInput {
+        width: 45px !important;
+        gap: 3px !important;
+    }
+
+    .assignedContact {
+        font-size: 15px !important;
+    }
+
+    .popOut-taskCard {
+        padding-left: 0px !important;
+    }
+
+    .messageAddedTask {
+        width: 264px;
+        height: 65px;
+    }
+
+    .messageAddedTask p {
+        width: 220px;
+        font-size: 21px;
+    }
+}

@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html id="html" lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Board</title>
+
+    <link rel="stylesheet" href="./styles/style.css">
+    <link rel="stylesheet" href="./fonts.css">
+    <link rel="stylesheet" href="styles/addTaskPopOut.css">
+    <link rel="stylesheet" href="./styles/board.css">
+    <link rel="stylesheet" href="styles/board2.css">
+    <link rel="stylesheet" href="styles/boardResponsive.css">
+    <link rel="stylesheet" href="./styles/addTaskPopOutResponsive.css">
+    <link rel="stylesheet" href="./styles/addTaskPopOut2nd.css">
+    <link rel="stylesheet" href="./styles/addTaskPopOutResponsive2nd.css">
+    <link rel="icon" href="assets/img/fav.ico" type="image/x-icon">
+    <link rel="stylesheet" href="./styles/invitePopUp.css">
+
+
+    <script src="./js/main.js"></script>
+    <script src="./js/board.js"></script>
+    <script src="js/board2.js"></script>
+    <script src="js/board3.js"></script>
+    <script src="js/render_board.js"></script>
+    <script src="js/mini_backend.js"></script>
+    <script src="./js/addTask.js"></script>
+
+
+</head>
+
+<body id="bodyBoard" onload="onloadBoard()">
+    <div id="overlay-background" onclick="closeOverlay()">
+    </div>
+    <div id="desktop">
+        <div w3-include-html="desktop-template.html"></div>
+        <div class="board-header">
+            <div class="board-header-h2">
+                <h2>Board</h2>
+            </div>
+            <div class="search-button">
+                <input class="search-input" onchange="filterHtml()" id="search" type="text" placeholder=" Find Task">
+                <button class="add-button" onclick="showAddTaskPopOut()">Add task <img class="add-button-img"
+                        src="assets/img/Capa1.svg"></button>
+                <button onclick="showAddTaskPopOut()" class="add-button-small"><img src="assets/img/Capa1.svg" alt=""></button>
+            </div>
+        </div>
+        <div class="search-button">
+            <input class="search-input-small" onchange="filterHtml()" id="searchSmall" type="text" placeholder=" Find Task">
+        </div>
+        <div>
+            <div class="working-class position-board">
+                <div class="position-board-flex">
+                    <div class="width100">
+                        <div class="working-headlines margin-top">
+                            <div class="margin-left">
+                                To do</div>
+                            <div onclick="showAddTaskPopOut('To Do')">
+                                <img class="plus-btn margin-right" src="assets/img/todo-plus.svg" alt="">
+                            </div>
+                        </div>
+                        <div ondrop="moveTo('To Do')" ondragover="allowDrop(event)" id="toDoContent"
+                            class="drag-drop-height">
+                        </div>
+                    </div>
+                    <div class="width100">
+                        <div class="working-headlines">
+                            <div class="margin-left">
+                                In progress</div>
+                            <div onclick="showAddTaskPopOut('In progress')">
+                                <img class="plus-btn margin-right" src="assets/img/todo-plus.svg" alt="">
+                            </div>
+                        </div>
+                        <div ondrop="moveTo('In progress')" ondragover="allowDrop(event)" id="inProgressContent"
+                            class="drag-drop-height">
+                        </div>
+                    </div>
+                </div>
+                <div class="position-board-flex">
+                    <div class="width100">
+                        <div class="working-headlines">
+                            <div class="margin-left">
+                                Awaiting Feedback</div>
+                            <div onclick="showAddTaskPopOut('Awaiting Feedback')">
+                                <img class="plus-btn margin-right" src="assets/img/todo-plus.svg" alt="">
+                            </div>
+                        </div>
+                        <div ondrop="moveTo('Awaiting Feedback')" ondragover="allowDrop(event)"
+                            id="awaitingFeedbackContent" class="drag-drop-height">
+                        </div>
+                    </div>
+                    <div class="width100">
+                        <div class="working-headlines">
+                            <div class="margin-left">
+                                Done</div>
+                            <div onclick="showAddTaskPopOut('Done')">
+                                <img class="plus-btn margin-right" src="assets/img/todo-plus.svg" alt="">
+                            </div>
+                        </div>
+                        <div ondrop="moveTo('Done')" ondragover="allowDrop(event)" id="doneContent"
+                            class="drag-drop-height">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="overlay" class="overlay d-none">
+    </div>
+
+    <div w3-include-html="invitePopUp.html"></div>
+    <div w3-include-html="addTaskPopOut.html"></div>
+    
+    <div id="bg" style="display: none;"></div> 
+
+</body>
+<script src="./js/addTask.js"></script>
+</html>

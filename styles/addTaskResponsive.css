@@ -1,0 +1,396 @@
+@media(max-width:1400px) {
+    .taskCard {
+        width: auto;
+    }
+
+    .headline {
+        width: 80vw;
+    }
+
+    .contentContainer {
+        margin-left: 70px;
+    }
+
+    .buttonsContainer {
+        margin-left: 852px;
+    }
+
+    .clearButton {
+        position: absolute;
+        left: 920px;
+        top: 848px;
+    }
+
+    .midLine {
+        margin-left: 59px;
+    }
+
+    .topBoxRight {
+        margin-left: 0px;
+    }
+
+    .bottomBoxRight {
+        margin-left: 0px;
+    }
+
+    #kanban {
+        margin-left: -50px;
+    }
+}
+
+@media(max-width: 1250px) {
+    .contentContainer {
+        margin-left: 10px;
+    }
+
+    .midLine {
+        margin-left: 15px;
+        margin-right: 15px;
+    }
+
+    .buttonsContainer {
+        margin-left: 710px;
+    }
+
+    .clearButton {
+        position: absolute;
+        left: 775px;
+        top: 848px;
+    }
+}
+
+@media(max-width:1100px) {
+    .taskCard {
+        width: auto;
+    }
+
+    .contentContainer {
+        box-sizing: border-box;
+        width: 100%;
+        margin-left: 0px !important;
+    }
+
+    .headline {
+        width: 100%;
+        height: auto !important;
+        display: flex;
+        justify-content: center;
+        margin-left: 0px;
+        margin-bottom: 23px;
+        margin-top:55px;
+    }
+
+    .headline span {
+        width: 422px;
+    }
+
+    .topBoxRight {
+        flex-direction: column-reverse;
+    }
+
+    .topContent {
+        display: flex;
+        flex-direction: column !important;
+        align-items: center;
+    }
+
+    .midLine {
+        display: none;
+    }
+
+    .bottomContent {
+        display: flex;
+        flex-direction: column !important;
+        align-items: center;
+    }
+
+    .buttonsContainer {
+        display: none;
+    }
+
+    .createButtonResponsiveContainer {
+        position: fixed;
+        top: 11px;
+        z-index: 2;
+        display: flex !important;
+        justify-content: center;
+        height: 51px;
+        width: calc(100% - 230px);
+        border: none;
+    }
+
+    .createButtonResponsiveContainer div {
+        width: 422px;
+        height: 51px;
+        display: flex;
+        justify-content: flex-end;
+        border: none;
+    }
+
+    .createButtonResponsive {
+        font-family: 'Inter';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 21px;
+        line-height: 120%;
+        color: #FFFFFF;
+        background: #2A3647;
+        border-radius: 10px;
+        width: 124px;
+    }
+
+    .createButtonResponsive:hover {
+        border: none;
+        background-color: #29ABE2;
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    }
+
+    .createButtonResponsive:active {
+        background-color: #091931;
+    }
+
+    .titleContainer {
+        box-sizing: border-box;
+        width: 100% !important;
+    }
+
+    .profile-container {
+        display: none;
+    }
+
+    #kanban {
+        display: none;
+    }
+
+    .header {
+        width: 100%;
+        z-index: 2;
+    }
+
+    .KanbanResponsive {
+        position: absolute;
+        top: 25px;
+        display: flex;
+        width: 100%;
+        justify-content: center;
+        font-family: 'Inter';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 120%;
+        color: #000000;
+    }
+
+    .KanbanResponsive span {
+        width: 422px;
+    }
+
+    .clearButton {
+        display: none;
+    }
+}
+
+@media(max-width:800px) {
+    .taskCard {
+        height: auto;
+        width: 100%;
+        background: #f6f7f8;
+        position: absolute;
+        top: 0;
+        left: 0;
+        margin-left: 0px;
+        margin-top: 79.02px;
+        display: flex;
+        flex-direction: column;
+        padding-left: 25px;
+    }
+
+    .headline {
+        width: 363px;
+        display: flex;
+        justify-content: flex-start;
+        height: 78px;
+        margin-top: 55px;
+        padding-left: 0px;
+        font-size: 47px;
+    }
+
+    .contentContainer {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        height: 766.98px;
+        height: auto;
+        margin-left: 33px;
+        margin-top: 0px;
+        position: relative;
+    }
+
+    .topContent {
+        flex-direction: column;
+        margin-left: 0px !important;
+        width: 363px;
+        padding-left: 0px;
+    }
+
+    .titleContainer {
+        width: 363px !important;
+        height: 68px !important;
+    }
+
+    .descriptionContainer {
+        width: 363px !important;
+        height: 120px;
+        padding-top: 9px;
+    }
+
+    #description {
+        height: 93px;
+    }
+
+    .topBoxRight {
+        display: flex;
+        flex-direction: column-reverse;
+        margin-left: 0;
+        width: 363px;
+    }
+
+    .bottomBoxRight {
+        display: flex;
+        flex-direction: column;
+        margin-left: 0;
+        gap: 8px;
+    }
+
+    .categoryContainer {
+        width: 363px !important;
+        padding-top: 9px;
+    }
+
+    .input {
+        width: 220px;
+    }
+
+    .newCategoryInput {
+        padding-left: 21px;
+    }
+
+    .newCategoryColorsBox {
+        width: 363px !important;
+    }
+
+    .assignContainer {
+        width: 363px !important;
+        padding-top: 9px;
+    }
+
+    .buttonOpenCloseCategory {
+        padding-left: 60px !important;
+    }
+
+    .buttonOpenClose {
+        padding-left: 38px !important;
+    }
+
+    .contactInputContainer {
+        width: 363px !important;
+        height: 41px;
+    }
+
+    .newContactImg {
+        padding-left: 0px;
+    }
+
+    .assignInput {
+        width: 257px !important;
+    }
+
+    .midLine {
+        display: none;
+    }
+
+    .inputContainer {
+        width: 363px;
+        height: 41px;
+    }
+
+    .newAssignToInput {
+        padding-left: 0px;
+    }
+
+    .bottomContent {
+        flex-direction: column;
+        margin-left: 0px !important;
+        width: 363px;
+        padding-left: 0px;
+    }
+
+    .dateInputField {
+        width: 363px !important;
+        height: 41px !important;
+    }
+
+    .priorityBoxesContainer {
+        width: 363px !important;
+        height: 51px;
+        padding-top: 13px !important;
+    }
+
+    .priority {
+        margin-top: 9px;
+    }
+
+    .addSubtaskContainer {
+        margin-top: 9px;
+        width: 363px !important;
+        height: 41px !important;
+    }
+
+    .subtasksInput {
+        margin-left: 20px;
+        width: 223px;
+        font-size: 18px;
+    }
+
+    .date {
+        padding-bottom: 8px;
+    }
+
+    .bottomBoxLeft {
+        margin-top: 9px;
+        padding-top: 9px;
+    }
+
+    .prioContainer {
+        padding-top: 9px !important;
+        width: 363px;
+    }
+
+
+    .buttonsContainer {
+        display: none;
+    }
+
+    .createButton {
+        display: none;
+    }
+
+    .createButtonResponsiveContainer {
+        position: fixed;
+        top: 11px;
+        z-index: 2;
+        display: flex !important;
+        justify-content: flex-start;
+        height: 51px;
+        width: auto;
+        border: none;
+    }
+
+    .createButtonResponsiveContainer div {
+        width: 363px;
+        height: 51px;
+        display: flex;
+        justify-content: flex-end;
+        border: none;
+    }
+}

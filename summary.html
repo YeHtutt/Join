@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./fonts.css">
+    <link rel="stylesheet" href="./styles/style.css">
+    <link rel="stylesheet" href="./styles/summary.css">
+    <link rel="stylesheet" href="./styles/summary-responsive.css">
+    <link rel="icon" href="assets/img/fav.ico" type="image/x-icon">
+    <script src="./js/main.js"></script>
+    <script src="js/summary.js"></script>
+    <script src="./js/register.js"></script>
+    <script src="./js/mini_backend.js"></script>
+    <script src="js/board.js"></script>
+    <script src="js/login.js"></script>
+
+    <title>summary</title>
+</head>
+
+<body id="body" onload="initSummary()">
+
+
+    <div w3-include-html="desktop-template.html"></div>
+    <div class="desktop" id="desktop">
+        <div class="html-topic">
+            <h2>Summary</h2>
+            <div class="html-topic-sub">
+            <span class="line"></span>
+            <p>Everything in a nutshell!</p>
+        </div>
+        </div>
+
+        <div class="flex-center">
+            <div class="task-container">
+                <div class="status-container">
+                    <div class="single-container">
+                        <a href="board.html" class="task-status">
+                            <div class="number" id="task-in-board-nr"></div>
+                            <p>Tasks in board</p>
+
+                        </a>
+                    </div>
+                    <div class="single-container">
+                        <a href="board.html" class="task-status">
+                            <div class="number" id="task-in-progress-nr"></div>
+                            <p>Tasks in Progress</p>
+
+                        </a>
+                    </div>
+                    <div class="single-container">
+                        <a href="board.html" class="task-status">
+                            <div class="number" id="awaiting-feedback-nr"></div>
+                            <p>Awaiting Feedback</p>
+
+                        </a>
+                    </div>
+                </div>
+                <a href="board.html" class="urgency">
+                    <div class="urgent">
+                        <div class="u-circle orange">
+                            <img src="assets/img/summary-urgency.png" >
+
+                        </div>
+                        <div class="urgent-container">
+                            <div class="urgent-nr" id="urgent-nr"></div>
+                            <p>Urgent</p>
+                        </div>
+                    </div>
+                    <span class="line-grey"></span>
+                    <div class="deadline-container">
+                        <div class="deadline-date" id="deadline-date"></div>
+                        <p>Upcoming Deadline</p>
+                    </div>
+                </a>
+                <div class="do-counter-container">
+                    <div class="do-inner-container">
+                        <a href="board.html" class="do-counter">
+                            <div class="img-container">
+                                <div class="u-circle blue">
+                                <img src="assets/img/to-do-icon.png">
+                            </div>
+                            </div>
+
+
+                            <div class="do-nr-container">
+                                <div class="do-nr" id="do-nr"></div>
+                                <p>To-do</p>
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="do-inner-container" style="justify-content: flex-end; display: flex;">
+                        <a href="board.html" class="do-counter">
+                            <div class="img-container">
+                                <div class="u-circle blue">
+                                <img src="assets/img/done-icon.png">
+                                </div>
+                            </div>
+                            <div class="do-nr-container">
+                                <div class="do-nr" id="done-nr"></div>
+                                <p>Done</p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="greeting-container" id="greeting-container">
+                <p id="greeting"></p>
+                <h3 id="name"></h3>
+            </div>
+        </div>
+
+
+    </div>
+
+</body>
+
+</html>

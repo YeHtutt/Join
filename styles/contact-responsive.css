@@ -1,0 +1,455 @@
+@media(max-width:1320px) {
+    .html-topic p {
+        font-size: 21px;
+    }
+
+    .html-topic h2 {
+        font-size: 47px;
+        height: auto;
+        width: auto;
+    }
+
+    .contact-circle {
+        width: 80px;
+        height: 80px;
+        font-size: 27px;
+    }
+
+    #float-contact-name {
+        font-size: 27px;
+    }
+
+    .card-container-left h3 {
+        height: auto;
+    }
+
+
+}
+
+@media(max-width:1210px) {
+
+    .contact-information {
+        width: auto;
+    }
+
+    .add-contact-card {
+        left: 230px;
+        right: 0;
+        top: 89px;
+        bottom: 0px;
+        transform: translate(0%, 0%);
+        width: auto;
+        height: auto;
+        flex-direction: column;
+    }
+
+    .card-container-left {
+        width: auto;
+        border-bottom-left-radius: 0px;
+        border-top-left-radius: 30px;
+        border-top-right-radius: 30px;
+        padding-top: 0px;
+        padding: 0px;
+        align-items: center;
+        height: 46%;
+        justify-content: center;
+
+    }
+
+    .help-container {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .logo-card {
+        display: none;
+    }
+
+    .card-container-right {
+        height: 54%;
+        align-items: center;
+        border-bottom-right-radius: 30px;
+        border-bottom-left-radius: 30px;
+        border-top-right-radius: 0px;
+    }
+
+    .close-contact-container1 {
+        display: flex;
+    }
+
+    .close-contact-container {
+        display: none;
+    }
+
+    .contact-flex {
+        flex-direction: column;
+        margin-top: -89px;
+    }
+
+    input {
+        margin-right: 0px !important;
+    }
+
+    .btn-container {
+        margin-left: 0px;
+        margin-right: 0px;
+        margin-bottom: 48px;
+        margin-top: 0px;
+    }
+
+    .html-topic {
+        margin-left: 0px;
+    }
+
+    .floating-contact-container {
+        margin-left: 10px;
+    }
+
+    .icon-container {
+        margin-left: 0px;
+        margin-right: 0px;
+    }
+
+}
+
+@media(max-width:1164px) {
+    body {
+        overflow-x: hidden !important;
+    }
+
+    #kanban {
+        font-size: 16px;
+        position: absolute;
+        top: 98px;
+        left: 34px;
+    }
+
+    .add-contact-card {
+        width: 480px;
+        bottom: 0px;
+        top: 11.02px;
+        left: 50%;
+        right: 50%;
+        transform: translate(-50%, 0%);
+    }
+
+    .card-container-right input {
+        margin-top: 17.5px;
+        margin-bottom: 17.5px;
+        width: 285px;
+        height: 25px;
+        padding: 8px 21px;
+    }
+
+    .head-contact {
+        width: 100%;
+    }
+
+    .header {
+        justify-content: flex-end;
+
+    }
+
+    .html-topic img {
+        display: block;
+    }
+
+    #kanban {
+        display: none;
+    }
+
+    .display {
+        display: block !important;
+    }
+
+    .html-topic {
+        height: auto;
+        flex-direction: column;
+        align-items: flex-start;
+        padding-left: 34px;
+    }
+
+    .html-topic-sub {
+        flex-direction: column-reverse;
+        align-items: flex-start;
+    }
+
+    .html-topic p {
+        margin-top: 20px;
+        margin-bottom: 32px;
+    }
+
+    .line-blue {
+        width: 90px;
+        height: 0px;
+        margin: 0px;
+
+    }
+
+    .contact-container {
+        margin-top: 86.89px;
+    }
+
+    .right-container {
+        justify-content: flex-start;
+        padding-left: 0px;
+        display: none;
+        position: absolute;
+        z-index: 10;
+        left: 230px;
+        background-color: #F6F7F8;
+        width: auto;
+        height: calc(100vh - 89px);
+        width: calc(100vw - 230px);
+    }
+
+    .floating-contact-container {
+        margin-left: 0px;
+        height: auto;
+        padding-left: 34px;
+    }
+
+    .button-container {
+        display: none;
+    }
+
+    .responsive-buttons {
+        display: flex;
+    }
+
+    .edit {
+        display: none !important;
+    }
+
+    .left-container {
+        width: calc(100vw - 230px);
+    }
+
+
+    .position-top {
+        display: flex !important;
+        margin-top: 17px !important;
+        margin-bottom: 17px !important;
+        margin-right: 10px !important;
+    }
+
+    .contact-container {
+        margin-left: 36px;
+        margin-right: 35px;
+    }
+
+    #kanban-contact {
+        display: block;
+        font-size: 16px;
+        position: absolute;
+        top: 34.89px;
+        left: 34px;
+    }
+}
+
+
+@media(max-width:800px) {
+    body {
+        /* background-color: white;*/
+        overflow-x: hidden;
+    }
+
+
+    #kanban {
+        display: none;
+    }
+
+    .btn-container {
+        justify-content: center;
+    }
+
+    .btn-contact-blue {
+        width: auto;
+        height: 51px;
+    }
+
+    .btn-contact-white {
+        width: 85px;
+        height: 51px;
+        margin-right: 30px;
+    }
+
+    .btn-contact-blue img {
+        display: none;
+    }
+
+    .btn-contact-white img {
+        display: none;
+    }
+
+
+    .margin-left {
+        margin-left: 25px;
+    }
+
+    .contact-information {
+        height: auto;
+    }
+
+    .html-topic {
+        margin-top: 73px;
+    }
+
+    .hidden {
+        left: 50%;
+        right: 50%;
+        top: 1500%;
+    }
+
+    .add-contact-card {
+        width: 381px;
+        left: 0px;
+        bottom: 80px;
+        top: 11.02px;
+        left: 50%;
+        right: 50%;
+        transform: translate(-50%, 0%);
+    }
+
+
+
+    .desktop {
+        margin: 0px;
+    }
+
+    .left-container {
+        margin-top: 79.02px;
+        width: 100vw;
+    }
+
+    .right-container {
+        justify-content: flex-start;
+        margin-top: 79.02px;
+        top: 0px;
+        left: 0px;
+        width: 100vw;
+        margin-bottom: 89px;
+    }
+
+    .floating-contact-container {
+        margin-top: 35px;
+    }
+
+    .help-container h3 {
+        font-size: 47px;
+        margin: 0px;
+    }
+
+    .help-container p {
+        font-size: 21px;
+    }
+
+    .contact-container {
+        margin-bottom: 80px;
+        overflow-x: hidden;
+    }
+
+    #contact-name {
+        background-position-x: 285px;
+    }
+
+    #contact-email {
+        background-position-x: 285px;
+    }
+
+    #contact-phone {
+        background-position-x: 285px;
+    }
+}
+
+@media(max-width:577px) {
+
+    .contact-container {
+        margin-left: 0px;
+    }
+
+    .responsive-buttons {
+        margin-right: 34px;
+    }
+
+    .html-topic img {
+        margin-right: 34px;
+    }
+
+
+}
+
+@media(max-height:880px) {
+    .responsive-buttons {
+        margin-top: -110px;
+    }
+
+    .right-container {
+        margin-bottom: 0px;
+    }
+}
+
+@media(max-height:700px) {
+    .responsive-buttons {
+        margin-top: -161px;
+    }
+
+}
+
+@media(max-height:680px) {
+    .floating-contact-container {
+        margin-top: 4px;
+    }
+
+    .btn-container {
+        margin-top: -13px;
+    }
+}
+
+
+
+@media(max-width:300px) {
+    .name-card {
+        justify-content: flex-start;
+    }
+
+    .circle {
+        margin: 0px;
+        margin-left: 5px;
+    }
+
+    .info {
+        margin: 0px;
+        margin-left: 5px;
+    }
+
+    #kanban-contact {
+        left: 10px;
+    }
+
+    .html-topic {
+        padding-left: 10px;
+    }
+
+    .floating-contact-container {
+        padding-left: 10px;
+    }
+
+    .responsive-buttons {
+        margin-top: -182px;
+    }
+
+    #float-contact-name {
+        font-size: 19px;
+    }
+
+    .contact-details p {
+        margin: 0px;
+        margin-bottom: 80px;
+    }
+
+    .right-container {
+        padding-bottom: 80px;
+    }
+
+}

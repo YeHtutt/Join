@@ -1,0 +1,373 @@
+@media(max-width:800px) {
+    .createButtonResponsive {
+        font-family: 'Inter';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 21px;
+        line-height: 120%;
+        color: #FFFFFF;
+        background: #2A3647;
+        border-radius: 10px;
+        width: 124px;
+        cursor: pointer;
+    }
+
+    .createButtonResponsive:hover {
+        border: none;
+        background-color: #29ABE2;
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    }
+
+    .createButtonResponsive:active {
+        background-color: #091931;
+    }
+
+    .clearButtonImgblue {
+        filter: invert(76%) sepia(51%) saturate(1615%) hue-rotate(168deg) brightness(92%) contrast(92%);
+    }
+
+    .clearButtonImgGray {
+        filter: invert(41%) sepia(6%) saturate(1189%) hue-rotate(179deg) brightness(92%) contrast(84%);
+    }
+
+    .clearButton {
+        display: none;
+    }
+
+    .bottomBoxRight {
+        margin-top: -8px !important;
+        padding-bottom: 100px;
+    }
+
+    .header {
+        z-index: 2;
+    }
+
+    .profile-container {
+        display: none;
+    }
+
+    .KanbanResponsive {
+        display: flex;
+        box-sizing: border-box;
+        width: 80vw;
+        justify-content: flex-start;
+        position: absolute;
+        top: 25px;
+        padding-left: 0px;
+        font-family: 'Inter';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 120%;
+        color: #000000;
+    }
+
+    .addSubtaskBtn {
+        margin-right: 25px !important;
+    }
+}
+
+@media(max-width:400px) {
+    .taskCard {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+    .createButtonResponsiveContainer div {
+        width: 320px;
+    }
+
+    .taskCard {
+        padding-left: 5px;
+        padding-right: 5px;
+    }
+
+    .headline {
+        box-sizing: border-box;
+        width: 100%;
+        font-size: 47px;
+        display: flex;
+        justify-content: center;
+    }
+
+    .headline span {
+        width: 320px;
+    }
+
+    .titleContainer {
+        width: 320px !important;
+    }
+
+    #title {
+        font-size: 18px;
+    }
+
+    .descriptionContainer {
+        width: 320px !important;
+    }
+
+    #description {
+        font-size: 18px;
+    }
+
+    .prioContainer {
+        width: 320px !important;
+    }
+
+    .priorityBoxesContainer {
+        width: 320px !important;
+    }
+
+    .dateInputField {
+        width: 320px !important;
+    }
+
+    .inputContainer {
+        width: 320px !important;
+    }
+
+    .contactInputContainer {
+        width: 320px !important;
+    }
+
+    .categoryContainer {
+        width: 320px !important;
+    }
+
+    .assignContainer {
+        width: 320px !important;
+    }
+
+    .assignInput {
+        font-size: 18px !important;
+        width: 217px !important;
+    }
+
+    .bottomBoxLeft {
+        width: 320px !important;
+    }
+
+    .input {
+        width: 190px;
+        font-size: 18px;
+    }
+
+    .buttonOpenCloseCategory {
+        padding-left: 53px !important;
+    }
+
+    .buttonOpenClose {
+        padding-left: 41px !important;
+    }
+
+    .addSubtaskContainer {
+        width: 320px !important;
+    }
+
+    #subtaskOninput {
+        padding-left: 0px !important;
+    }
+
+    .newCategoryInput {
+        padding-left: 12px;
+    }
+
+    .newCategoryColorsBox {
+        width: 320px !important;
+    }
+
+    .KanbanResponsive {
+        display: flex;
+        box-sizing: border-box;
+        width: 100%;
+        justify-content: center;
+    }
+
+    .KanbanResponsive span {
+        width: 320px;
+    }
+
+    .subtasksInput {
+        width: 223px !important;
+        font-size: 18px !important;
+    }
+
+    .subtasksInput::placeholder,
+    #title::placeholder,
+    #description::placeholder {
+        font-size: 18px !important;
+    }
+
+    .priorityBoxesContainer {
+        flex-direction: column !important;
+        height: auto !important;
+    }
+
+    .addSubtaskBtn {
+        margin-right: 24px;
+    }
+
+    .topBoxRight {
+        width: 320px !important;
+    }
+}
+
+@media(max-width:350px) {
+    .createButtonResponsiveContainer div {
+        width: 260px;
+    }
+
+    .taskCard {
+        padding-left: 2px;
+        padding-right: 0px;
+    }
+
+    .headline {
+        box-sizing: border-box;
+        width: 100%;
+        font-size: 40px;
+        display: flex;
+        justify-content: flex-start;
+    }
+
+    .headline span {
+        width: 260px;
+    }
+
+    .titleContainer {
+        width: 260px !important;
+    }
+
+    #title {
+        font-size: 15px;
+    }
+
+    .descriptionContainer {
+        width: 260px !important;
+    }
+
+    #description {
+        font-size: 15px;
+    }
+
+    .prioContainer {
+        width: 260px !important;
+    }
+
+    .priorityBoxesContainer {
+        width: 260px !important;
+    }
+
+    .dateInputField {
+        width: 260px !important;
+        font-size: 15px;
+    }
+
+    .inputContainer {
+        width: 260px !important;
+    }
+
+    .contactInputContainer {
+        width: 260px !important;
+    }
+
+    .topContent,
+    .bottomContent {
+        width: 280px;
+        align-items: flex-start;
+    }
+
+    .categoryContainer {
+        width: 260px !important;
+    }
+
+    .assignContainer {
+        width: 260px !important;
+    }
+
+    .assignInput {
+        font-size: 15px !important;
+        width: 179px !important;
+    }
+
+    .bottomBoxLeft {
+        width: 260px !important;
+    }
+
+    .input {
+        width: 152px;
+        font-size: 15px;
+    }
+
+    .buttonOpenCloseCategory {
+        padding-left: 27px !important;
+    }
+
+    .buttonOpenClose {
+        padding-left: 15px !important;
+    }
+
+    .addSubtaskContainer {
+        width: 258px !important;
+    }
+
+    #subtaskOninput {
+        gap: 3px !important;
+        width: 47px !important;
+    }
+
+    .newCategoryInput {
+        padding-left: 12px;
+    }
+
+    .newCategoryColorsBox {
+        width: 260px !important;
+    }
+
+    .KanbanResponsive {
+        display: flex;
+        box-sizing: border-box;
+        width: 100%;
+        justify-content: flex-start;
+        font-size: 15px;
+    }
+
+    .KanbanResponsive span {
+        width: 260px;
+    }
+
+    .subtasksInput {
+        font-size: 15px !important;
+        width: 172px !important;
+    }
+
+    .side-bar {
+        width: 280px;
+    }
+
+    .newCategoryInput,
+    .newAssignToInput {
+        width: 30px;
+        gap: 3px;
+    }
+
+    .assignedList,
+    .circleContainer {
+        width: 260px;
+    }
+
+    .contentContainer {
+        width: 280px;
+    }
+    
+    .messageAddedTask {
+        width: 264px;
+        height: 65px;
+    }
+
+    .messageAddedTask p {
+        width: 220px;
+        font-size: 21px;
+    }
+}

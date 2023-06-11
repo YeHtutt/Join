@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacts</title>
+    <link rel="stylesheet" href="./fonts.css">
+    <link rel="stylesheet" href="./styles/style.css">
+    <link rel="stylesheet" href="./styles/contacts.css">
+    <link rel="stylesheet" href="./styles/contact-responsive.css">
+    <link rel="stylesheet" href="./styles/addTaskPopOut.css">
+    <link rel="stylesheet" href="./styles/addTaskPopOutResponsive.css">
+    <link rel="stylesheet" href="./styles/addTaskPopOut2nd.css">
+    <link rel="stylesheet" href="./styles/addTaskPopOutResponsive2nd.css">
+    <link rel="stylesheet" href="./styles/board.css">
+    <link rel="stylesheet" href="./styles/board2.css">
+    <link rel="icon" href="assets/img/fav.ico" type="image/x-icon">
+    <link rel="stylesheet" href="./styles/invitePopUp.css">
+
+
+
+    <script src="./js/main.js"></script>
+    <script src="./js/contacts.js"></script>
+    <script src="./js/mini_backend.js"></script>
+    <script src="./js/register.js"></script>
+    <script src="./js/addTask.js"></script>
+
+
+
+
+
+</head>
+
+<body id="bodyBoard" onload="onloadContact()">
+    <div class="success" id="success" style="display: none;">Contact succesfully created</div>
+    <div onclick="closeContactCard()" id="bg" style="display: none;"></div>
+    <div class="hidden" id="contact-card">
+        <div class="card-container-left">
+            <div class="close-contact-container1">
+                <img onclick="closeContactCard()" class="close-card1" src="assets/img/close-contact1.png">
+            </div>
+            <div class="help-container">
+                <img class="logo-card" src="assets/img/join-logo-contact-card.png">
+                <div id="card-header">
+                    <h3>Add contact</h3>
+                    <p>Tasks are better with a team!</p>
+                </div>
+                <span class="vertical-blue-line"></span>
+            </div>
+        </div>
+        <div class="card-container-right">
+            <div class="close-contact-container">
+                <img onclick="closeContactCard()" class="close-card" src="assets/img/close-contact-card.png">
+            </div>
+            <div class="contact-flex">
+                <div class="icon-container" id="icon-container">
+                    <img src="assets/img/add-contact-profile.png">
+                </div>
+                <div class="input-container">
+                    <input id="contact-name" type="Text" placeholder="Name" style="text-transform: capitalize;">
+                    <input id="contact-email" type="email" placeholder="Email">
+                    <input id="contact-phone" type="number" placeholder="Phone">
+                </div>
+            </div>
+            <div class="btn-container" id="btn-container">
+                <button id="left-btn" onclick="closeContactCard()" class="btn-contact-white">Cancel<img
+                        class="cancel-img" src="assets/img/contact-cancel-button.png"></button>
+                <button id="right-btn" onclick="CreateNewContact()" class="btn-contact-blue">Create contact<img
+                        class="create-contact-img" src="assets/img/contact-create-contact-button.png"></button>
+
+            </div>
+        </div>
+
+    </div>
+
+    <div class="desktop" id="desktop">
+        <div w3-include-html="desktop-template.html"></div>
+        <div class="big-container">
+            <div class="left-container" id="left-container">
+                <div class="button-container position-top">
+                    <button onclick="showCard()">New contact<img class="img"
+                            src="assets/img/new-contact-button.png"></button>
+                </div>
+                <div class="contact-container" id="contact-container"></div>
+            </div>
+            <div class="right-container" id="right-container">
+                <div id="kanban-contact">Kanban Project Managment Tool</div>
+                <div class="html-topic">
+                    <div class="head-contact">
+                        <h2>Contacts</h2>
+                        <img onclick="backToContactList()" src="assets/img/contact-back-arrow.png">
+                    </div>
+
+                    <div class="html-topic-sub">
+                        <span class="line-blue"></span>
+                        <p>Better with a team</p>
+                    </div>
+                </div>
+                <div class="floating-contact-container" id="floating-contact-container" style="display: none">
+                    <div class="name-container" id="name-container" style="display: none;">
+                        <div class="contact-circle" id="contact-circle">
+                            <p id="contact-circle-letters"></p>
+                        </div>
+                        <div class="margin-left">
+                            <h4 id="float-contact-name">Anton Meyer</h4>
+                            <a onclick="showAddTaskPopOut()"><img src="assets/img/add-task-contact.png">
+                                <p>Add task</p>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="contact-information" id="contact-information">
+                    </div>
+                    <div class="contact-details" id="contact-details" style="display: none;">
+                        <h5>Email</h5>
+                        <p id="email">test@web.de</p>
+
+                        <h5>Phone</h5>
+                        <p id="phone">+4911111111</p>
+                    </div>
+                    <div class="responsive-buttons" id="responsive-buttons">
+
+                    </div>
+                </div>
+                <div class="button-container">
+                    <button onclick="showCard()">New contact<img class="img"
+                            src="assets/img/new-contact-button.png"></button>
+                </div>
+
+
+            </div>
+
+        </div>
+    </div>
+    
+    <div w3-include-html="invitePopUp.html"></div>
+    <div w3-include-html="addTaskPopOut.html"></div>
+    
+</body>
+
+</html>
