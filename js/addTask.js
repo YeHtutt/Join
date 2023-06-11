@@ -384,8 +384,10 @@ async function sendInvitationEmail(event) {
         method: "post",
         body: formData
     });
-    if (response.ok)
+    document.getElementById('bg').style.zIndex = 15;
+    if (response.ok){
         showEmailSentStatus(); //shows email was sent successfully
+    }
     else
         showEmailNotSend(); //shows email fail to send
 }
@@ -398,6 +400,7 @@ function showInvitePopUp() {
         top: 0,
         behavior: "smooth"
     });
+    document.getElementById('bg').style.zIndex = 30;
     document.getElementById('bg').style.display = '';
     document.getElementById('email-form').classList.remove('sendmailContainer-hidden');
     document.getElementById('email-form').classList.add('sendmailContainer');
@@ -407,6 +410,7 @@ function showInvitePopUp() {
  * This function hide the popup window for the invite new contact
  */
 function hideInvitePopUp() {
+    document.getElementById('bg').style.zIndex = 15;
     document.getElementById('bg').style.display = 'none';
     document.getElementById('email-form').classList.add('sendmailContainer-hidden');
     document.getElementById('email-form').classList.remove('sendmailContainer');
@@ -750,7 +754,7 @@ function setAllFieldsToDefault() {
     deleteSubTask();
 }
 
-/**This function return the priority boxes to default style*/
+/**This function return the priority boxes to default style*/ 
 function setPrioBoxesTodefault() {
     document.getElementById('prioUrgentBox').classList.remove('bgUrgent');
     document.getElementById('prioMediumBox').classList.remove('bgMedium');

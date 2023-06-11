@@ -3,6 +3,7 @@
     font-style: normal;
     font-weight: 400;
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
     gap: 5px;
@@ -17,8 +18,6 @@
     top: 40%;
     left: 230px;
     z-index: 999;
-    transform: translate(0px, 0px);
-    transition: 500ms;
 }
 
 
@@ -41,8 +40,15 @@
     top: 40%;
     left: 230px;
     z-index: 999;
-    transform: translate(2500px, 0px);
-    transition: 500ms;
+    display: none;
+}
+
+.invitationInput{
+    box-sizing: border-box;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .invitPopUp-label {
@@ -82,9 +88,9 @@
 }
 
 .invitePopUp-close{
-    position: fixed;
-    top: 20px;
-    right: 20px;
+    position: absolute;
+    top: 15px;
+    right: 15px;
     cursor: pointer;
 }
 
@@ -96,8 +102,9 @@
     .sendmailContainer {
         left: 5px;
         flex-direction: column;
-        height: 180px;
-        width: 260px;
+        height: 220px;
+        width: 270px;
+        position: relative;
     }
 
     #email{
@@ -108,5 +115,15 @@
     .invitePopUp-sumitBtn{
         box-sizing: border-box;
         width: 96%;
+    }
+
+    .invitationInput{
+        box-sizing: border-box;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
     }
 }
