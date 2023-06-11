@@ -33,7 +33,7 @@ input:-webkit-autofill:active {-webkit-box-shadow: 0 0 0 30px white inset !impor
 
 .popOut-taskCard {
     position: fixed;
-    top: -99px;
+    top: 0px;
     left: 130px;
     width: 1116px;
     height: 914px;
