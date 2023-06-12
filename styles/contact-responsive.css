@@ -51,7 +51,7 @@
         padding-top: 0px;
         padding: 0px;
         align-items: center;
-        height: 46%;
+        height: 44%;
         justify-content: center;
 
     }
@@ -66,8 +66,9 @@
     }
 
     .card-container-right {
-        height: 54%;
+        height: 55%;
         align-items: center;
+        border: 1px solid lightgray;
         border-bottom-right-radius: 30px;
         border-bottom-left-radius: 30px;
         border-top-right-radius: 0px;
@@ -302,7 +303,7 @@
     }
 
     .add-contact-card {
-        width: 381px;
+        width: 98%;
         left: 0px;
         bottom: 80px;
         top: 11.02px;
