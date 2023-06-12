@@ -16,7 +16,7 @@ a {
     margin: 0px;
     width: 315px;
     height: 73px;
-    margin-right: 30px !important;
+    /*margin-right: 30px !important;*/
 }
 
 .html-topic p {
@@ -63,7 +63,7 @@ a {
 .flex-center {
     display: flex;
     align-items: center;
-
+    /*justify-content: center;*/
 }
 
 .task-container {
