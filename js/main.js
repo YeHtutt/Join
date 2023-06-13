@@ -11,7 +11,7 @@ async function init(id) {
 async function loadUserData() {
   await loadUserAccountsFromBackend();
   loadActiveUserLocal();
-  await loadTasksFromBackend()
+  await loadTasksFromBackend();
 }
 
 function changeProfileImg() {

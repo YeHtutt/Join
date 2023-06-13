@@ -4,6 +4,10 @@ body {
     position: relative;
 }
 
+.textColorRed{
+    color: red;
+}
+
 button{
     cursor: pointer;
 }

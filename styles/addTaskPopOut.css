@@ -12,6 +12,10 @@ button{
     cursor: pointer;
 }
 
+.textColorRed{
+    color: red;
+}
+
 .deleteNewCatBtn{
     cursor: pointer;
     margin-bottom: 10px;
