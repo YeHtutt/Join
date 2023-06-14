@@ -254,6 +254,7 @@ async function showAddTaskPopOut(progresscategory) {
     document.getElementById('profile-container').classList.add('profile-container-d-none');
     document.getElementById('bodyBoard').classList.add('noScrollSite');
     document.getElementById('bg').style.display = '';
+    document.getElementById('addTaskPopOutContainer').style.zIndex = 15;
     progress = progresscategory;
     renderCategory();
     displayChosenContactsForTask();
@@ -266,6 +267,7 @@ function closePopOutAddTask() {
     document.getElementById('bodyBoard').classList.remove('noScrollSite');
     document.getElementById('kanban').classList.remove('kanban');
     document.getElementById('profile-container').classList.remove('profile-container-d-none');
+    document.getElementById('addTaskPopOutContainer').style.zIndex = -1;
     setAllFieldsToDefault();
     closeDropdownCategory();
     closeDropDownAssignTo();

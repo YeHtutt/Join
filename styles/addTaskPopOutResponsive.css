@@ -4,7 +4,6 @@
     }
 
     .popOut-taskCard {
-        /*width: 80vw;*/
         width: 970px;
         box-shadow: none;
         border-radius: 30px;
@@ -54,7 +53,7 @@
 }
 
 @media(max-width: 1280px) {
-    #bg{
+    #bg {
         left: 230px !important;
     }
 
@@ -62,9 +61,13 @@
         width: 94%;
     }
 
+    .addTaskPopOutContainer{
+        justify-content: flex-start;
+    }
+
     .popOut-taskCard {
-        margin-top: unset;
-        top: -50px;
+        margin-left: 230px;
+        height: 100vh;
     }
 
     .topBoxLeft {
@@ -157,21 +160,22 @@
         width: 255px;
     }
 
-    .newAssignToInput, .newCategoryInput{
+    .newAssignToInput,
+    .newCategoryInput {
         padding-left: 10px !important;
     }
 
-    .input{
+    .input {
         width: 238px !important;
     }
 
-    .subtaskOninput{
+    .subtaskOninput {
         padding-left: 0px !important;
     }
 }
 
 @media(max-width:1100px) {
-    #bg{
+    #bg {
         top: 80px !important;
         left: 230px !important;
     }
@@ -186,7 +190,7 @@
     }
 
     .popOut-taskCard {
-        margin-top: 131px;
+        margin-top: 160px;
     }
 
     .bg {
@@ -333,14 +337,16 @@
         display: none;
     }
 
-    .newAssignToInput, .newCategoryInput{
+    .newAssignToInput,
+    .newCategoryInput {
         padding-left: 10px;
     }
 
-    .input{
+    .input {
         width: 238px !important;
     }
-    .subtaskOninput{
+
+    .subtaskOninput {
         padding-left: 0px !important;
     }
 }
@@ -364,6 +370,7 @@
 
     .popOut-taskCard {
         width: 100%;
+        height: 100%;
         background: #f6f7f8;
         position: absolute;
         top: 0px;
