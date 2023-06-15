@@ -41,7 +41,6 @@ var progress;
  */
 function onloadAddTask() {
     init('addTask');
-    renderSubtasks();
     updateCalender();
 }
 
@@ -92,24 +91,31 @@ function chooseSubtasks() {
         if (checkbox.checked) {
             selectedSubtasks.push(checkbox.value);
         }
+        else if(checkbox.checked == false){
+            selectedSubtasks.splice(checkbox.value, 0);
+
+        }
     }
 }
 
 /**
  * This function tender all subTasks with their check boxes
+ * onclick="chooseSubtasks()"
  */
 function renderSubtasks() {
+    selectedSubtasks.splice(0);
     appendixSubtask = document.getElementById('SubtaskAppendixContainer');
     appendixSubtask.innerHTML = "";
     for (let i = 0; i < subTasks.length; i++) {
         const showSubTask = subTasks[i];
         appendixSubtask.innerHTML += /*html*/`
             <label class="container">
-                <input type="checkbox" class="checkedSubTasks" onclick="chooseSubtasks()" value="${showSubTask}" />
+                <input type="checkbox" class="checkedSubTasks" onclick="chooseSubtasks()" value="${showSubTask}" checked/>
                 <span class="checkmark" id="checkmark${i}"></span>
                 <div class="subtaskCheck">${showSubTask}</div>
             </label>
             `;
+        selectedSubtasks.push(showSubTask);
     }
 }
 
@@ -218,9 +224,7 @@ async function addTaskOnSubPages() {
         selectedSubtasks = [];
         p = false;
     }
-
 }
-
 
 /** This function decides with the priority background color which Priority has been activated and get all the inputs of the one priority box*/
 function getPriorityInformation() {
@@ -257,7 +261,7 @@ function getPriorityLowBoxInfos() {
     priorityImg = "../assets/img/low.png";
 }
 
-/**This function return the priority boxes to default style*/ 
+/**This function return the priority boxes to default style*/
 function setPrioBoxesTodefault() {
     document.getElementById('prioUrgentBox').classList.remove('bgUrgent');
     document.getElementById('prioMediumBox').classList.remove('bgMedium');

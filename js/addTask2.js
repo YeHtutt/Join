@@ -203,7 +203,6 @@ function setAllFieldsToDefault() {
     dueDate = document.getElementById('date');
     dueDate.value = "";
     setPrioBoxesTodefault();
-    deleteSubTask();
 }
 
 /**
@@ -215,14 +214,14 @@ function annimationTaskAddedToBoard() {
     document.getElementById('messageAddedTask').classList.add('animate');
     setTimeout(function () {
         document.getElementById('messageAddedTask').style.display = "none";
-    }, 3900)
+    }, 1000)
     document.getElementById('addTaskBtn').classList.add('buttonDisabled');
     setTimeout(function () {
         document.getElementById('addTaskBtn').classList.add('buttonEnabled');
-    }, 4000)
+    }, 1200)
     setTimeout(function () {
         window.location = "./board.html";
-    }, 3600)
+    }, 1500)
 }
 
 /**
@@ -234,14 +233,14 @@ function annimationTaskAddedToBoardForPopOut() {
     document.getElementById('messageAddedTask').classList.add('animate');
     setTimeout(function () {
         document.getElementById('messageAddedTask').style.display = "none";
-    }, 3900)
+    }, 1500)
     document.getElementById('addTaskBtn').classList.add('buttonDisabled');
     setTimeout(function () {
         document.getElementById('addTaskBtn').classList.add('buttonEnabled');
-    }, 4000)
+    }, 1700)
     setTimeout(function () {
         closePopOutAddTask();
-    }, 3600)
+    }, 2200)
 }
 
 /**show AddTaskPopOut.html*/

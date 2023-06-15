@@ -30,7 +30,7 @@ async function updateHTML() {
     for (let i = 0; i < user.length; i++) {
         const userTasks = user[i];
         cards = userTasks['progress'];
-        renderHTML(cards, userTasks)
+        renderHTML(cards, userTasks);
     } updateHTMLNon();
 }
 
