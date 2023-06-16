@@ -343,7 +343,7 @@
     }
 
     .side-bar {
-        width: 280px;
+        width: 100vw;
     }
 
     .newCategoryInput,

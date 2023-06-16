@@ -203,6 +203,10 @@ function setAllFieldsToDefault() {
     dueDate = document.getElementById('date');
     dueDate.value = "";
     setPrioBoxesTodefault();
+    //document.getElementById('textColorRed').classList.remove('textColorRed');
+    /*subTasks = [];
+    selectedSubtasks = [];
+    renderSubtasks();*/
 }
 
 /**

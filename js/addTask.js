@@ -91,9 +91,8 @@ function chooseSubtasks() {
         if (checkbox.checked) {
             selectedSubtasks.push(checkbox.value);
         }
-        else if(checkbox.checked == false){
+        else if (checkbox.checked == false) {
             selectedSubtasks.splice(checkbox.value, 0);
-
         }
     }
 }
@@ -189,6 +188,7 @@ async function pushNewTaskToBackEnd(newTask) {
  */
 function warnForSelectPriority() {
     document.getElementById('checkprio').classList.remove('d-none');
+    //document.getElementById('textColorRed').classList.add('textColorRed');
     document.getElementById('checkprio').innerHTML = 'Please select a priority!';
 }
 
@@ -204,6 +204,8 @@ async function addTaskToBoard() {
         closeDropdownCategory();
         closeDropDownAssignTo();
         choseContacts = [];
+        selectedSubtasks = [];
+        subTasks = [];
     }
 }
 
@@ -213,6 +215,8 @@ async function addTaskToBoard() {
  */
 async function addTaskOnSubPages() {
     await addTask();
+    await loadTasksFromBackend();
+    await loadUserAccountsFromBackend();
     if (p == true) {
         document.getElementById('bg').style.display = 'none';
         annimationTaskAddedToBoardForPopOut();
@@ -220,8 +224,10 @@ async function addTaskOnSubPages() {
         closeDropdownCategory();
         closeDropDownAssignTo();
         choseContacts = [];
-        updateHTML();
         selectedSubtasks = [];
+        subTasks = [];
+        //userAccounts[activeUser]['userTasks'] = tasks;
+        await updateHTML();
         p = false;
     }
 }

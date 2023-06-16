@@ -1,9 +1,9 @@
- /**
- * Close the dropdown container from category
- * 
- */
+/**
+* Close the dropdown container from category
+* 
+*/
 function closeDropdownCategoryBoard() {
-    let categoryInputContainer = document.getElementById('inputContainer'); 
+    let categoryInputContainer = document.getElementById('inputContainer');
     let categoryList = document.getElementById('categoryList');
     categoryList.style.display = "none";
     categoryInputContainer.style.border = "1px solid #D1D1D1";
@@ -19,8 +19,8 @@ function closeDropdownCategoryBoard() {
 async function renderAssignToBoard(cards) {
     let user = userAccounts[activeUser]['userTasks'];
     let todo = user.find((item) => item.id === cards);
-    let assignedContactList = document.getElementById('assignedList'); 
-    assignedContactList.innerHTML = ""; 
+    let assignedContactList = document.getElementById('assignedList');
+    assignedContactList.innerHTML = "";
     let users = userAccounts[activeUser]['userContacts'];
     renderAssignToBoardContacts(users, assignedContactList, todo)
 }
@@ -88,17 +88,17 @@ async function saveInputTask(cards) {
     await saveAndNewRender(cards)
 }
 
- 
+
 /**
  * Show Overlay and update HTML
  * 
  * @param {number} cards 
  */
 async function saveAndNewRender(cards) {
-    await saveTasksToBackend()
+    await saveTasksToBackend();
     await saveUserAccountsToBackend();
-    updateHTML()
-    showOverlay(cards)
+    updateHTML();
+    showOverlay(cards);
 }
 
 
@@ -173,7 +173,7 @@ function setPriority(todo, priority, priorityImg) {
  * Save the priority
  * 
  * @param {object} todo 
- */ 
+ */
 function prioritySave(todo) {
     const { priority, priorityImg } = getPriority();
     setPriority(todo, priority, priorityImg);
@@ -190,9 +190,12 @@ async function chooseSubtasksBoard(todo) {
     let allChekbox = document.querySelectorAll(`.checkedSubTasks`);
     for (let i = 0; i < allChekbox.length; i++) {
         const checkbox = allChekbox[i];
-        if (checkbox.checked) {
-            todo.subTaskDone.push(checkbox.value);
-        }
+            if (checkbox.checked) {
+                todo.subTaskDone.push(checkbox.value);
+            }
+            else if (checkbox.checked == false) {
+                todo.subTaskDone.splice(checkbox.value, 0);
+            }
     }
     await saveTasksToBackend()
     await saveUserAccountsToBackend();
@@ -208,7 +211,7 @@ function renderSubtasksBoard(cards) {
     let user = userAccounts[activeUser]['userTasks'];
     let todo = user.find((item) => item.id === cards);
     let content = document.getElementById('subtasks');
-    let subTaskDone = todo.subTaskDone
+    let subTaskDone = todo.subTaskDone;
     content.innerHTML = "";
     for (let j = 0; j < todo['subTask'].length; j++) {
         const showSubTask = todo['subTask'][j];
@@ -235,7 +238,7 @@ async function changeProgressbar(cards) {
     if (todo.subTask.length == 0) {
         contant.classList.add('d-none');
     }
-    if ( todo.subTask.length > 0) {
+    if (todo.subTask.length > 0) {
         document.getElementById(`progress${cards}`).style.backgroundColor = "#F4F4F4";
     }
 }
@@ -257,7 +260,8 @@ function filterHtml() {
         description = description.toLowerCase();
         if (element.includes(search) || description.includes(search)) {
             renderfilter(search, i)
-        } }
+        }
+    }
 }
 
 /**
@@ -265,14 +269,14 @@ function filterHtml() {
  * 
  * @returns 
  */
-function chooseSearchInput(){
+function chooseSearchInput() {
     if (window.innerWidth <= 640) {
         var search = document.getElementById('searchSmall').value;
     } else {
         var search = document.getElementById('search').value;
     }
-    return {search}
-} 
+    return { search }
+}
 
 
 /**
