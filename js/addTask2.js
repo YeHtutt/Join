@@ -56,7 +56,7 @@ function closeDropdownCategory() {
     categoryList.style.display = "none";
     categoryInputContainer.style.border = "1px solid #D1D1D1";
     categoryInputContainer.style.borderRadius = "10px";
-    if (l == true) {
+    if (helpvar1CategoryBox == true) {
         document.getElementById("input").disabled = true;
     } else {
         document.getElementById("input").disabled = false;
@@ -65,7 +65,7 @@ function closeDropdownCategory() {
 
 /**This function shows the Category Select Menu*/
 function showDropdownCategory() {
-    if (j == false) {
+    if (helpvar2CategoryBox == false) {
         categoryList = document.getElementById('categoryList');
         categoryInputContainer = document.getElementById('inputContainer');
         categoryList.style.display = "block";
@@ -101,8 +101,8 @@ function newCategoryInput() {
     document.getElementById('color').style.background = "white";
     document.getElementById('newCategoryColorsBox').style.display = "flex";
     document.getElementById("input").disabled = false;
-    l = true;
-    j = true;
+    helpvar1CategoryBox = true;
+    helpvar2CategoryBox = true;
 }
 
 /**
@@ -125,7 +125,7 @@ async function addNewCategory() {
     document.getElementById('color').style.background = newCategoryColor;
     if (newCategory !== '') {
         pushNewCategoryToBackend(newCategory);
-    } j = false;
+    } helpvar2CategoryBox = false;
 }
 
 /**
@@ -167,7 +167,7 @@ function rejectNewCategory() {
     document.getElementById('newCategoryColorsBox').style.display = "none";
     document.getElementById("input").disabled = true;
     document.getElementById('color').style = 'background: rgb(255,255,255)';
-    j = false;
+    helpvar2CategoryBox = false;
 }
 
 /**
@@ -203,10 +203,8 @@ function setAllFieldsToDefault() {
     dueDate = document.getElementById('date');
     dueDate.value = "";
     setPrioBoxesTodefault();
-    //document.getElementById('textColorRed').classList.remove('textColorRed');
-    /*subTasks = [];
-    selectedSubtasks = [];
-    renderSubtasks();*/
+    document.getElementById('SubtaskAppendixContainer').innerHTML = ""; 
+    document.getElementById('checkprio').classList.remove('textColorRed');
 }
 
 /**

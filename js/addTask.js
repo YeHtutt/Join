@@ -6,9 +6,9 @@ var subtaskInput;
 var appendixSubtask;
 var categoryList;
 var choseContacts = [];
-var l = false;
-var j = false;
-var p = false
+var helpvar1CategoryBox = false;
+var helpvar2CategoryBox = false;
+var priorityChecked = false
 
 var priority;
 var priorityImg;
@@ -24,6 +24,7 @@ var newAddedContactLetters = [];
 var arrayContactColor = [];
 var helpVarSumit = false;
 var theMail;
+
 /**global variable for addTask() function */
 var title;
 var description;
@@ -136,7 +137,7 @@ async function addTask() {
     idTask = generateTaskId(tasks);
     if (typeof progress == 'undefined')
         progress = "To Do";
-    if (p == true)
+    if (priorityChecked == true)
         newTaskpush(title, description, category, contact, dueDate, subTask, subTaskDone, priority, priorityImg, idTask, progress);
     else
         warnForSelectPriority();
@@ -188,8 +189,8 @@ async function pushNewTaskToBackEnd(newTask) {
  */
 function warnForSelectPriority() {
     document.getElementById('checkprio').classList.remove('d-none');
-    //document.getElementById('textColorRed').classList.add('textColorRed');
     document.getElementById('checkprio').innerHTML = 'Please select a priority!';
+    document.getElementById('checkprio').classList.add('textColorRed');
 }
 
 /**
@@ -198,7 +199,7 @@ function warnForSelectPriority() {
  */
 async function addTaskToBoard() {
     await addTask();
-    if (p == true) {
+    if (priorityChecked == true) {
         annimationTaskAddedToBoard();
         setAllFieldsToDefault();
         closeDropdownCategory();
@@ -217,7 +218,7 @@ async function addTaskOnSubPages() {
     await addTask();
     await loadTasksFromBackend();
     await loadUserAccountsFromBackend();
-    if (p == true) {
+    if (priorityChecked == true) {
         document.getElementById('bg').style.display = 'none';
         annimationTaskAddedToBoardForPopOut();
         setAllFieldsToDefault();
@@ -226,22 +227,21 @@ async function addTaskOnSubPages() {
         choseContacts = [];
         selectedSubtasks = [];
         subTasks = [];
-        //userAccounts[activeUser]['userTasks'] = tasks;
         await updateHTML();
-        p = false;
+        priorityChecked = false;
     }
 }
 
 /** This function decides with the priority background color which Priority has been activated and get all the inputs of the one priority box*/
 function getPriorityInformation() {
     if (document.getElementById('prioUrgentBox').classList.contains('bgUrgent')) {
-        p = true;
+        priorityChecked = true;
         getPriorityUrgentBoxInfos();
     } else if (document.getElementById('prioMediumBox').classList.contains('bgMedium')) {
-        p = true;
+        priorityChecked = true;
         getPriorityMediumBoxInfos();
     } else if (document.getElementById('prioLowBox').classList.contains('bgLow')) {
-        p = true;
+        priorityChecked = true;
         getPriorityLowBoxInfos();
     }
 }

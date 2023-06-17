@@ -190,14 +190,14 @@ async function chooseSubtasksBoard(todo) {
     let allChekbox = document.querySelectorAll(`.checkedSubTasks`);
     for (let i = 0; i < allChekbox.length; i++) {
         const checkbox = allChekbox[i];
-            if (checkbox.checked) {
-                todo.subTaskDone.push(checkbox.value);
-            }
-            else if (checkbox.checked == false) {
-                todo.subTaskDone.splice(checkbox.value, 0);
-            }
+        if (checkbox.checked) {
+            todo.subTaskDone.push(checkbox.value);
+        }
+        else if (checkbox.checked == false) {
+            todo.subTaskDone.splice(checkbox.value, 0);
+        }
     }
-    await saveTasksToBackend()
+    await saveTasksToBackend();
     await saveUserAccountsToBackend();
 }
 
@@ -234,7 +234,7 @@ async function changeProgressbar(cards) {
     const present = todo.subTaskDone.length;
     const result = present ? `${(present * 100) / todo.subTask.length}%` : 0;
     progress.style.width = result;
-    contant.innerHTML = `${present}/${todo.subTask.length} Done`;
+    contant.innerHTML = `${present}/${todo.subTask.length} Done`; 
     if (todo.subTask.length == 0) {
         contant.classList.add('d-none');
     }
