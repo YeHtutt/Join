@@ -1,0 +1,143 @@
+<form class="popOut-taskCard popOut-hidden d-none" onsubmit="onSubPageBoardAddTask(); return false" id="popOut-taskCard"
+    onload="renderSubtasks()">
+
+
+    <div class="contentContainer" id="contentContainer">
+        <div class="headlineContainer">
+        <div class="headline">
+            <span>Add Task</span>
+            <!--<div class="closeBtnContainer">-->
+            <span><img class="closeBtn" src="./assets/img/closeBtn.png" id="closeBtn-addTaskPopOut"
+                    onclick="closePopOutAddTask('popOut-taskCard')"></span>
+            <!--</div>-->
+        </div>
+    </div>
+    <div class="topContent">
+        <div class="topBoxLeft">
+            <div class="titleContainer">
+                <label for="title" class="title">Title</label>
+                <input type="text" id="title" placeholder="Enter a title" required />
+            </div>
+
+            <div class="descriptionContainer">
+                <label for="description" class="description">Description</label>
+                <textarea id="description" placeholder="Enter a description" required></textarea>
+            </div>
+        </div>
+
+        <div class="midLine"></div>
+
+        <div class="topBoxRight">
+            <div class="d-column">
+                <label for="date" class="date">Due date</label>
+                <input class="dateInputField" id="date" placeholder="dd/mm/yyyy" type="date" required>
+            </div>
+
+            <div class="prioContainer">
+                <label for="priority" class="priority">Prio</label>
+                <div class="priorityBoxesContainer">
+                    <div class="prioUrgentBox" id="prioUrgentBox" onclick="insertUrgent()">Urgent <img
+                            id="prioUrgentImg" src="assets/img/urgent.png"></div>
+                    <div class="prioMediumBox" id="prioMediumBox" onclick="insertMedium()">Medium <img
+                            id="prioMediumImg" src="assets/img/medium.png"></div>
+                    <div class="prioLowBox" id="prioLowBox" onclick="insertLow()">Low <img id="prioLowImg"
+                            src="assets/img/low.png"></div>
+                </div>
+                <div id="checkprio" class="d-none textColorRed"></div>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="bottomContent">
+        <div class="bottomBoxLeft">
+            <div class="categoryContainer">
+                <label for="category" class="category">Category</label>
+                <div class="inputContainer" id="inputContainer" onclick="dropDown()">
+                    <input class="input" id="input" type="text" placeholder="Select task Category" required>
+                    <div id="color" class="color"></div>
+                    <div id="buttonDropDown" class="buttonOpenClose"><img src="assets/img/dropdown-arrow.png"></div>
+                    <div class="newCategoryInput" id="newCategoryInput">
+                        <img src="assets/img/icon_clear.png" id="clearSubtaskInput" onclick="rejectNewCategory()">
+                        <div class="line"></div>
+                        <img src="assets/img/checkmark.png" id="selectedSubtask" onclick="addNewCategory()">
+                    </div>
+                </div>
+                <div id="categoryList" class="categoryList"></div>
+                <div class="newCategoryColorsBox" id="newCategoryColorsBox">
+                    <div class="color" style="background-color:#8AA4FF ;" onclick="newColor('#8AA4FF')"></div>
+                    <div class="color" style="background-color:#FF0000 ;" onclick="newColor('#FF0000')"></div>
+                    <div class="color" style="background-color:#2AD300 ;" onclick="newColor('#2AD300')"></div>
+                    <div class="color" style="background-color:#FF8A00 ;" onclick="newColor('#FF8A00')"></div>
+                    <div class="color" style="background-color:#E200BE ;" onclick="newColor('#E200BE')"></div>
+                    <div class="color" style="background-color:#0038FF ;" onclick="newColor('#0038FF')"></div>
+                </div>
+            </div>
+
+            <div class="assignContainer">
+                <label for="assignedTo" class="assignedTo">Assigned to</label>
+                <div class="contactInputContainer" id="contactInputContainer" onclick="dropDownAssignTo()">
+                    <input class="assignInput" id="assignInput" type="text" placeholder="Select contacts to assign"
+                        onchange="filterContact()" />
+                    <div id="assignDropDown" class="buttonOpenClose" ><img
+                            src="assets/img/dropdown-arrow.png"></div>
+                    <div class="newAssignToInput" id="newAssignToInput">
+                        <img src="assets/img/icon_clear.png" onclick="rejectAssignTo()">
+                        <div class="line"></div>
+                        <img src="assets/img/checkmark.png" onclick="addnewContact()">
+                    </div>
+                </div>
+                <div id="assignedList" class="assignedList"></div>
+                <div class="circleContactsContainer" id="circleContactsContainer"></div>
+            </div>
+        </div>
+
+        <div class="midLine"></div>
+
+        <div class="bottomBoxRight">
+            <label for="subtasks" class="subtasks">Subtasks</label>
+            <div class="addSubtaskContainer">
+                <input class="subtasksInput" id="subtasksInput" placeholder="Add new Subtask" />
+                <div class="addSubtaskBtn" id="addSubtaskBtn" onclick="createNewSubtask()"><img
+                        src="assets/img/plus.png"></div>
+                <div class="subtaskOninput" id="subtaskOninput">
+                    <img src="assets/img/icon_clear.png" id="clearSubtaskInput" onclick="deleteSubTask()">
+                    <div class="line"></div>
+                    <img src="assets/img/checkmark.png" id="selectedSubtask" onclick="addSubTask()">
+                </div>
+            </div>
+
+            <div class="SubtaskAppendixContainer" id="SubtaskAppendixContainer">
+            </div>
+        </div>
+        <div class="buttonsContainer">
+            <button class="createButton" type="submit" id="addTaskBtn">Create Task <img class="createBtnImg"
+                    src="assets/img/right-mark.png"></button>
+        </div>
+    </div>
+    </div>
+
+
+
+    <div id="messageAddedTask" class="messageAddedTask">
+        <p>Task added to board</p>
+        <img src="assets/img/board-icon.png">
+    </div>
+
+
+
+    <div class="createButtonResponsiveContainer">
+        <div>
+            <button class="createButtonResponsive " type="submit" id="addTaskBtnResponsive">Create <img
+                    class="createBtnImg" src="assets/img/right-mark.png"></button>
+        </div>
+    </div>
+
+    <button class="clearButton" onmouseover="clearBtnhover()" onmouseout="clearBtnCancelhover()"
+        onclick="clearAllAddTaskFields()" onmousedown="setClearBtnOnActive()" onmouseup="clearBtnhover()">Cancel <img class="clearBtnImg" id="clearBtnImg"
+            src="assets/img/cross-mark.svg">
+    </button>
+
+    
+</form>
+

@@ -214,10 +214,10 @@ async function addTaskToBoard() {
  * This function is used to create a (Project Management Task Object) which include the information of the title, description, due date, priority, the department, contact etc.
  * This function was called on Board Page and Contact Page
  */
-async function addTaskOnSubPages() {
+async function onSubPageBoardAddTask() {
     await addTask();
-    await loadTasksFromBackend();
-    await loadUserAccountsFromBackend();
+    //await loadTasksFromBackend();
+    //await loadUserAccountsFromBackend();
     if (priorityChecked == true) {
         document.getElementById('bg').style.display = 'none';
         annimationTaskAddedToBoardForPopOut();
@@ -228,6 +228,25 @@ async function addTaskOnSubPages() {
         selectedSubtasks = [];
         subTasks = [];
         await updateHTML();
+        priorityChecked = false;
+    }
+}
+
+/**
+ * This function is used to create a (Project Management Task Object) which include the information of the title, description, due date, priority, the department, contact etc.
+ * This function was called on Board Page and Contact Page
+ */
+async function onSubPageContactsAddTask() {
+    await addTask();
+    if (priorityChecked == true) {
+        document.getElementById('bg').style.display = 'none';
+        annimationTaskAddedToBoardForPopOut();
+        setAllFieldsToDefault();
+        closeDropdownCategory();
+        closeDropDownAssignTo();
+        choseContacts = [];
+        selectedSubtasks = [];
+        subTasks = [];
         priorityChecked = false;
     }
 }
