@@ -4,15 +4,20 @@ body {
     position: relative;
 }
 
-.textColorRed{
+::-webkit-scrollbar {
+    width: 0;
+    display: none;
+}
+
+.textColorRed {
     color: red;
 }
 
-button{
+button {
     cursor: pointer;
 }
 
-.deleteNewCatBtn{
+.deleteNewCatBtn {
     cursor: pointer;
     margin-bottom: 10px;
     padding: 2px;
@@ -22,7 +27,7 @@ button{
     cursor: pointer;
 }
 
-.deleteNewCatBtn:hover{
+.deleteNewCatBtn:hover {
     background-color: #C7017A;
 }
 
@@ -34,13 +39,18 @@ button{
     position: relative;
 }
 
-textarea {resize: none;}
+textarea {
+    resize: none;
+}
 
-.d-column {display: flex;
+.d-column {
+    display: flex;
     flex-direction: column;
 }
 
-.d-none {display: none;}
+.d-none {
+    display: none;
+}
 
 .taskCard {
     box-sizing: border-box;
@@ -359,7 +369,8 @@ textarea {resize: none;}
     background: #FFFFFF;
     border: 1px solid #D1D1D1;
     border-top: none;
-    border-radius: 0 0 10px 10px; /* top-left top-right bottom-right bottom-left */
+    border-radius: 0 0 10px 10px;
+    /* top-left top-right bottom-right bottom-left */
     overflow-y: auto;
     padding-left: 18px;
 }

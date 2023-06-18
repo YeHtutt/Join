@@ -180,6 +180,7 @@
 @media(max-width:800px) {
     .desktop {
         margin-left: 0px;
+        margin-bottom: 100px;
     }
 
     .html-topic {

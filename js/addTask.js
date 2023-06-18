@@ -283,7 +283,7 @@ function getPriorityMediumBoxInfos() {
 function getPriorityLowBoxInfos() {
     priority = document.getElementById('prioLowBox').innerText;
     priorityImg = document.createElement("prioLowImg");
-    priorityImg = "../assets/img/low.png";
+    priorityImg = "assets/img/low.png";
 }
 
 /**This function return the priority boxes to default style*/
