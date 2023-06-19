@@ -1,4 +1,3 @@
-
 function login() {
   let email = document.getElementById("login-email-input");
   let password = document.getElementById("login-password-input");

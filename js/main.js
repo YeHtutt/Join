@@ -5,7 +5,6 @@ async function init(id) {
   highlightSelectedNav(id);
   await loadUserData();
   changeProfileImg();
-  //await backend.deleteItem('tasks');
 }
 
 async function loadUserData() {

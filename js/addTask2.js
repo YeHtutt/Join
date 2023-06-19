@@ -108,10 +108,9 @@ function newCategoryInput() {
 /**
  *  This function gets the background color for the new category color dot
 */
-var newCategoryColor;
 function newColor(color) {
     document.getElementById('color').style.background = color;
-    newCategoryColor = color;
+    newColorForCategory = color;
 }
 
 /**
@@ -122,7 +121,7 @@ async function addNewCategory() {
     document.getElementById('newCategoryColorsBox').style.display = "none";
     document.getElementById('newCategoryInput').style.display = "none";
     document.getElementById('buttonDropDown').style.display = "flex";
-    document.getElementById('color').style.background = newCategoryColor;
+    document.getElementById('color').style.background = newColorForCategory;
     if (newCategory !== '') {
         pushNewCategoryToBackend(newCategory);
     } helpvar2CategoryBox = false;
@@ -135,7 +134,7 @@ async function addNewCategory() {
 function pushNewCategoryToBackend(newCategory) {
     let newCategories = {
         'category': newCategory.value,
-        'color': newCategoryColor
+        'color': newColorForCategory
     }
     let category = userAccounts[activeUser].userCategory;
     category.push(newCategories);
@@ -243,6 +242,28 @@ function annimationTaskAddedToBoardForPopOut() {
     setTimeout(function () {
         closePopOutAddTask();
     }, 2200)
+    setTimeout(function() {
+        window.location.reload(true);
+    },2400)
+}
+
+/**
+ * show the animation when the Task is created and direct to the board page
+ * while a task is being added to the board the addTask Button is disabled
+ * */
+function annimationTaskAddedFromContactsForPopOut() {
+    document.getElementById('messageAddedTask').style.display = "flex";
+    document.getElementById('messageAddedTask').classList.add('animate');
+    setTimeout(function () {
+        document.getElementById('messageAddedTask').style.display = "none";
+    }, 1500)
+    document.getElementById('addTaskBtn').classList.add('buttonDisabled');
+    setTimeout(function () {
+        document.getElementById('addTaskBtn').classList.add('buttonEnabled');
+    }, 1700)
+    setTimeout(function () {
+        closePopOutAddTask();
+    }, 2200)
 }
 
 /**show AddTaskPopOut.html*/
@@ -288,4 +309,22 @@ function updateCalender() {
 /**clear all field of AddTask page*/
 function clearAllAddTaskFields() {
     setAllFieldsToDefault();
+}
+
+/**This function changes clear button Image to blue by hover */
+function clearBtnhover() {
+    document.getElementById('clearBtnImg').classList.remove('clearButtonImgGray');
+    document.getElementById('clearBtnImg').classList.add('clearButtonImgblue');
+}
+
+/**This function changes clear button Image to the original color*/
+function clearBtnCancelhover() {
+    document.getElementById('clearBtnImg').classList.remove('clearButtonImgblue');
+    document.getElementById('clearBtnImg').classList.remove('clearButtonImgGray');
+}
+
+/** This function change the color of the Clear Button to gray when it is onactive*/
+function setClearBtnOnActive() {
+    document.getElementById('clearBtnImg').classList.remove('clearButtonImgblue');
+    document.getElementById('clearBtnImg').classList.add('clearButtonImgGray');
 }

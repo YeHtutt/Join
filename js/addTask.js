@@ -1,41 +1,41 @@
-var newCategoryColors = ['#8AA4FF', '#FF0000', '#2AD300', '#FF8A00', '#E200BE', '#0038FF'];
-var categoryInputContainer;
-var assignToInputContainer;
-var onInputSubTask;
-var subtaskInput;
-var appendixSubtask;
-var categoryList;
-var choseContacts = [];
-var helpvar1CategoryBox = false;
-var helpvar2CategoryBox = false;
-var priorityChecked = false
+let newColorForCategory;
+let categoryInputContainer;
+let assignToInputContainer;
+let onInputSubTask;
+let subtaskInput;
+let appendixSubtask;
+let categoryList;
+let choseContacts = [];
+let helpvar1CategoryBox = false;
+let helpvar2CategoryBox = false;
+let priorityChecked = false
 
-var priority;
-var priorityImg;
-var addsubtask;
-var subTasks = [];
-var selectedSubtasks = [];
-var userName;
-var newAssingedContact;
-var newLetters2;
-var selectedContactLetters = [];
-var newContacts = [];
-var newAddedContactLetters = [];
-var arrayContactColor = [];
-var helpVarSumit = false;
-var theMail;
+let priority;
+let priorityImg;
+let addsubtask;
+let subTasks = [];
+let selectedSubtasks = [];
+let userName;
+let newAssingedContact;
+let newLetters2;
+let selectedContactLetters = [];
+let newContacts = [];
+let newAddedContactLetters = [];
+let arrayContactColor = [];
+let helpVarSumit = false;
+let theMail;
 
 /**global variable for addTask() function */
-var title;
-var description;
-var contact;
-var subTaskDone;
-var category;
-var categoryColor;
-var dueDate;
-var subTask;
-var idTask;
-var progress;
+let title;
+let description;
+let contact;
+let subTaskDone;
+let category;
+let categoryColor;
+let dueDate;
+let subTask;
+let idTask;
+let progress;
 
 /**
  * this function is used to load AddTask-HTML page (init function)
@@ -216,8 +216,6 @@ async function addTaskToBoard() {
  */
 async function onSubPageBoardAddTask() {
     await addTask();
-    //await loadTasksFromBackend();
-    //await loadUserAccountsFromBackend();
     if (priorityChecked == true) {
         document.getElementById('bg').style.display = 'none';
         annimationTaskAddedToBoardForPopOut();
@@ -227,7 +225,6 @@ async function onSubPageBoardAddTask() {
         choseContacts = [];
         selectedSubtasks = [];
         subTasks = [];
-        await updateHTML();
         priorityChecked = false;
     }
 }
@@ -240,7 +237,7 @@ async function onSubPageContactsAddTask() {
     await addTask();
     if (priorityChecked == true) {
         document.getElementById('bg').style.display = 'none';
-        annimationTaskAddedToBoardForPopOut();
+        annimationTaskAddedFromContactsForPopOut();
         setAllFieldsToDefault();
         closeDropdownCategory();
         closeDropDownAssignTo();
@@ -322,7 +319,6 @@ function generateTaskId(tasks) {
         }
     } return id;
 }
-
 
 /**This function changes the Text and Image color to white of the Priority Urgent button, the other buttons (Prio Medium and Prio Low) change to their original color */
 function insertUrgent() {
@@ -407,22 +403,4 @@ function toggleInsertLow() {
             document.getElementById('prioLowImg').classList.remove("Img-white");
         }
     });
-}
-
-/**This function changes clear button Image to blue by hover */
-function clearBtnhover() {
-    document.getElementById('clearBtnImg').classList.remove('clearButtonImgGray');
-    document.getElementById('clearBtnImg').classList.add('clearButtonImgblue');
-}
-
-/**This function changes clear button Image to the original color*/
-function clearBtnCancelhover() {
-    document.getElementById('clearBtnImg').classList.remove('clearButtonImgblue');
-    document.getElementById('clearBtnImg').classList.remove('clearButtonImgGray');
-}
-
-/** This function change the color of the Clear Button to gray when it is onactive*/
-function setClearBtnOnActive() {
-    document.getElementById('clearBtnImg').classList.remove('clearButtonImgblue');
-    document.getElementById('clearBtnImg').classList.add('clearButtonImgGray');
 }
