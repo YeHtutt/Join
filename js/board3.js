@@ -233,3 +233,18 @@ function myFunction() {
     document.getElementById('kanban').classList.add('display-unset');
   }
 }
+
+/* Close the Category drop-down menu when clicked anywhere on the page*/
+window.addEventListener('click', function (event) {
+    if (isDropdownOpen && !event.target.closest('.categoryContainer')) {
+        closeDropdownCategory();
+    }
+});
+
+/* Close the AssignTo drop-down menu when clicked anywhere on the page */
+window.addEventListener('click', function (event) {
+    if (isAssignDropdownOpen && !event.target.closest('.assignContainer')) {
+        closeDropDownAssignTo();
+    }
+});
+

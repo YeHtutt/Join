@@ -61,6 +61,7 @@ function closeDropdownCategory() {
     } else {
         document.getElementById("input").disabled = false;
     }
+    isDropdownOpen = false;
 }
 
 /**This function shows the Category Select Menu*/
@@ -72,6 +73,7 @@ function showDropdownCategory() {
         categoryInputContainer.style.borderBottom = "none";
         categoryInputContainer.style.borderRadius = "10px 10px 0 0";
         renderCategory();
+        isDropdownOpen = true;
     }
 }
 
@@ -202,7 +204,7 @@ function setAllFieldsToDefault() {
     dueDate = document.getElementById('date');
     dueDate.value = "";
     setPrioBoxesTodefault();
-    document.getElementById('SubtaskAppendixContainer').innerHTML = ""; 
+    document.getElementById('SubtaskAppendixContainer').innerHTML = "";
     document.getElementById('checkprio').classList.remove('textColorRed');
 }
 
@@ -242,9 +244,9 @@ function annimationTaskAddedToBoardForPopOut() {
     setTimeout(function () {
         closePopOutAddTask();
     }, 2200)
-    setTimeout(function() {
+    setTimeout(function () {
         window.location.reload(true);
-    },2400)
+    }, 2400)
 }
 
 /**
@@ -328,3 +330,50 @@ function setClearBtnOnActive() {
     document.getElementById('clearBtnImg').classList.remove('clearButtonImgblue');
     document.getElementById('clearBtnImg').classList.add('clearButtonImgGray');
 }
+
+/**The methode is an event listener that responds to click events outside the dropdown menu and closes the dropdown menu when the user clicks anywhere on the page */
+document.addEventListener("DOMContentLoaded", function () {
+    let dropdownBtn = document.getElementById('buttonDropDown');
+    let categoryList = document.getElementById('categoryList');
+
+    let assignDropDownBtn = document.getElementById('assignDropDown');
+
+    // Click on the drop-down button to show or hide the drop-down menu
+    if (dropdownBtn) {
+        dropdownBtn.addEventListener('click', function (event) {
+            event.stopPropagation();
+            if (isDropdownOpen) {
+                closeDropdownCategory();
+            } else {
+                showDropdownCategory();
+            }
+        });
+
+        // Close the Category drop-down menu when clicked anywhere on the page
+        window.addEventListener('click', function (event) {
+            if (isDropdownOpen && !event.target.closest('.categoryContainer')) {
+                closeDropdownCategory();
+            }
+        });
+    }
+
+    if(assignDropDownBtn) {
+        assignDropDownBtn.addEventListener('click', function (event) {
+            event.stopPropagation();
+            if (isAssignDropdownOpen) {
+                closeDropDownAssignTo();
+            } else {
+                showDropDownAssignTo();
+            }
+        })
+    
+    
+    
+        // Close the AssignTo drop-down menu when clicked anywhere on the page
+        window.addEventListener('click', function (event) {
+            if (isAssignDropdownOpen && !event.target.closest('.assignContainer')) {
+                closeDropDownAssignTo();
+            }
+        });
+    }
+});

@@ -113,6 +113,7 @@ function closeDropDownAssignTo() {
     assignToInputContainer.style.border = "1px solid #D1D1D1";
     assignToInputContainer.style.borderRadius = "10px";
     document.getElementById('circleContactsContainer').style.display = "flex";
+    isAssignDropdownOpen = false;
 }
 
 /**open the dropdown AssignTo Menu*/
@@ -128,6 +129,7 @@ function showDropDownAssignTo() {
         renderAssignToCheckMarked();
         displayChosenContactsForTask();
     }
+    isAssignDropdownOpen = true;
 }
 
 /**This function is used for invite new contact via an Email to assign into the Kanban Project Managment Tool*/

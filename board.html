@@ -44,7 +44,7 @@
                 <h2>Board</h2>
             </div>
             <div class="search-button">
-                <input class="search-input" onchange="filterHtml()" id="search" type="text" placeholder=" Find Task">
+                <input class="search-input" onkeydown="searchOnEnter(event)" id="search" type="text" placeholder=" Find Task" > <!--onchange="filterHtml()"-->
                 <button class="add-button" onclick="showAddTaskPopOut()">Add task <img class="add-button-img"
                         src="assets/img/Capa1.svg"></button>
                 <button onclick="showAddTaskPopOut()" class="add-button-small"><img src="assets/img/Capa1.svg" alt=""></button>
@@ -64,7 +64,7 @@
                                 <img class="plus-btn margin-right" src="assets/img/todo-plus.svg" alt="">
                             </div>
                         </div>
-                        <div ondrop="moveTo('To Do')" ondragover="allowDrop(event)" id="toDoContent"
+                        <div ondrop="moveTo('To Do') ; returnOriginalColor('toDoContent'); removeHighlight('awaitingFeedbackContent')" ondragover="allowDrop(event); highLight('toDoContent')" ondragleave="removeHighlight('toDoContent')" id="toDoContent"
                             class="drag-drop-height">
                         </div>
                     </div>
@@ -76,7 +76,7 @@
                                 <img class="plus-btn margin-right" src="assets/img/todo-plus.svg" alt="">
                             </div>
                         </div>
-                        <div ondrop="moveTo('In progress')" ondragover="allowDrop(event)" id="inProgressContent"
+                        <div ondrop="moveTo('In progress'); returnOriginalColor('inProgressContent')" ondragover="allowDrop(event); highLight('inProgressContent')" ondragleave="removeHighlight('inProgressContent')" id="inProgressContent"
                             class="drag-drop-height">
                         </div>
                     </div>
@@ -90,7 +90,7 @@
                                 <img class="plus-btn margin-right" src="assets/img/todo-plus.svg" alt="">
                             </div>
                         </div>
-                        <div ondrop="moveTo('Awaiting Feedback')" ondragover="allowDrop(event)"
+                        <div ondrop="moveTo('Awaiting Feedback'); returnOriginalColor('awaitingFeedbackContent')" ondragover="allowDrop(event); highLight('awaitingFeedbackContent')" ondragleave="removeHighlight('awaitingFeedbackContent')"
                             id="awaitingFeedbackContent" class="drag-drop-height">
                         </div>
                     </div>
@@ -102,8 +102,8 @@
                                 <img class="plus-btn margin-right" src="assets/img/todo-plus.svg" alt="">
                             </div>
                         </div>
-                        <div ondrop="moveTo('Done')" ondragover="allowDrop(event)" id="doneContent"
-                            class="drag-drop-height">
+                        <div ondrop="moveTo('Done'); returnOriginalColor('doneContent')" ondragover="allowDrop(event); highLight('doneContent')" id="doneContent" ondragleave="removeHighlight('doneContent')"
+                            class="drag-drop-height ">
                         </div>
                     </div>
                 </div>

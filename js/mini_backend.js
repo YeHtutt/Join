@@ -1,5 +1,5 @@
 let jsonFromServer = {};
-let BASE_SERVER_URL = 'https://ye-htut-aung.developerakademie.net/smallest_backend_ever';
+let BASE_SERVER_URL = 'https://ye-htut-aung.de/smallest_backend_ever';
 
 
 const backend = {

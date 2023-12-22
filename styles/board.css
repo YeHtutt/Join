@@ -393,3 +393,11 @@ h2 {
 .no-cards{
     display: none;
 }
+
+.drag-area {
+    background-color: rgb(245,245,245);
+}
+
+.drag-area-highlight {
+    background-color: rgb(0,0,0,0.04);
+}

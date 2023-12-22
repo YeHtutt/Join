@@ -36,6 +36,9 @@ let dueDate;
 let subTask;
 let idTask;
 let progress;
+// Global variable to track the status of the dropdown menu
+let isDropdownOpen = false;
+let isAssignDropdownOpen = false;
 
 /**
  * this function is used to load AddTask-HTML page (init function)

@@ -80,7 +80,7 @@ function updateHTMLNon(){
     }
 }
 
-// 
+
 /**
  *  Render the HTML content for To Do
  * 
@@ -137,7 +137,6 @@ function updateHTMLDone(cards, userTasks) {
 }
 
 
-// 
 /**
  * Load all informatoins for tasks
  * 
@@ -239,7 +238,6 @@ function priorityImgCard(cards) {
  */
 function startDragging(id) {
     currentDraggedElement = id;
-    document.getElementById('bodyBoard').style.backgroundColor = 'rgb(0,0,0,0.1)';
     document.getElementById(`dragMe${id}`).classList.add('dragging');
 }
 
@@ -265,10 +263,37 @@ async function moveTo(category) {
     todo['progress'] = category;
     await saveTasksToBackend();
     await saveUserAccountsToBackend();
-    document.getElementById('bodyBoard').style.backgroundColor = 'rgb(246,247,248)';
+    document.getElementById('bodyBoard').style.backgroundColor = 'rgb(245,245,245)';
     updateHTML();
 }
 
+/**
+ * This function points to the corresponding field of the category to be dragged into
+ * 
+ * @param {string} id 
+ */
+function highLight(id) {
+    document.getElementById(id).classList.add('drag-area-highlight');        
+}
+
+/**
+ * This function removed the highlighted color of the categoryfield after drag leave
+ * 
+ * @param {string} id 
+ */
+function removeHighlight(id) {
+    document.getElementById(id).classList.remove('drag-area-highlight');
+}
+
+/**
+ * This function return the highlighted color of the pointed categoryfield after drop dragging
+ * 
+ * @param {string} id 
+ */
+function returnOriginalColor(id) {
+        document.getElementById(id).classList.remove('drag-area-highlight');
+        document.getElementById(id).classList.add('drag-area');
+}
 
 /**
  * Show overlay for more informations

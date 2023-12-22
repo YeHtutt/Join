@@ -234,7 +234,7 @@ async function changeProgressbar(cards) {
     const present = todo.subTaskDone.length;
     const result = present ? `${(present * 100) / todo.subTask.length}%` : 0;
     progress.style.width = result;
-    contant.innerHTML = `${present}/${todo.subTask.length} Done`; 
+    contant.innerHTML = `${present}/${todo.subTask.length} Done`;
     if (todo.subTask.length == 0) {
         contant.classList.add('d-none');
     }
@@ -246,8 +246,13 @@ async function changeProgressbar(cards) {
 
 /**
  * Select witch searchinput and checked if its includes
- * 
+ * it searchs, when the enter key is pressed
  */
+function searchOnEnter(event) {
+    if (event.key === "Enter") {
+        filterHtml(); 
+    }
+}
 function filterHtml() {
     let { search } = chooseSearchInput();
     search = search.toLowerCase();
