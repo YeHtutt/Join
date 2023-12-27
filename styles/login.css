@@ -12,6 +12,11 @@ body {
     position: relative;
 }
 
+.html-centered {
+    display: flex;
+    justify-content: center;
+}
+
 .display-none {
     display: none !important;
 }
