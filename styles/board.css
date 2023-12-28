@@ -11,14 +11,13 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
-    position: relative; 
 }
 
 .boardDesktop {
-    position: absolute;
     display: flex;
     flex-direction: column;
-    height: 100vh;
+    justify-content: center;
+    height: 100%;
     max-width: 1440px;
 }
 
@@ -130,7 +129,7 @@ h2 {
 .working-class {
     display: flex;
     justify-content: space-around;
-    height: 30px;
+    height: max-content;
     margin-top: 37px;
 }
 
@@ -421,38 +420,4 @@ h2 {
 
 .drag-area-highlight {
     background-color: rgb(0,0,0,0.04);
-}
-
-@media(max-height: 900px) {
-    .bodyBoard {
-        height: 100vh !important;
-    }
-}
-
-/* Ipad Air CSS */
-@media only screen and (width: 820px) and (height: 1180px) { 
-    .header, .side-bar {
-        position: fixed;
-    }
-}
-
-/* Ipad Mini CSS */
-@media only screen and (width: 768px) and (height: 1024px) { 
-    .boardDesktop {
-        width: 100vw;
-    }
-}
-
-/* Ipad Pro CSS */
-@media only screen and (width: 1024px) and (height: 1366px) { 
-    .header, .side-bar {
-        position: fixed;
-    }
-}
-
-/* Surface Pro CSS */
-@media only screen and (width: 912px) and (height: 1368px) { 
-    .header, .side-bar {
-        position: fixed;
-    }
 }

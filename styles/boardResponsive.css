@@ -10,9 +10,17 @@
         gap: 3px;
     }
 
+    .bodyBoard { 
+        height: 100%;
+    }
+
+    .header, .side-bar {
+        position: fixed;
+    }
+
     .working-class {
         display: flex;
-        height: 30px;
+        height: max-content;
         margin-top: 37px;
         flex-direction: column;
         justify-content: flex-start;
@@ -414,5 +422,39 @@
     .overlay {
         padding-left: 2%;
         padding-right: 9%;
+    }
+}
+
+@media only screen and (min-width: 1301px) and (max-height: 1000px){
+    .bodyBoard { 
+        height: 100%;
+    }
+}
+
+/* Ipad Air CSS */
+@media only screen and (width: 820px) and (height: 1180px) { 
+    .header, .side-bar {
+        position: fixed;
+    }
+}
+
+/* Ipad Mini CSS */
+@media only screen and (width: 768px) and (height: 1024px) { 
+    .boardDesktop {
+        width: 100vw;
+    }
+}
+
+/* Ipad Pro CSS */
+@media only screen and (width: 1024px) and (height: 1366px) { 
+    .header, .side-bar {
+        position: fixed;
+    }
+}
+
+/* Surface Pro CSS */
+@media only screen and (width: 912px) and (height: 1368px) { 
+    .header, .side-bar {
+        position: fixed;
     }
 }

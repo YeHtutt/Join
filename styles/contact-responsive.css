@@ -251,7 +251,6 @@
 
 @media(max-width:800px) {
     body {
-        /* background-color: white;*/
         overflow-x: hidden;
     }
 
