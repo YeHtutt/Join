@@ -371,3 +371,11 @@
         font-size: 21px;
     }
 }
+
+@media(max-height: 920px) {
+    .frame0 {
+        position: unset;
+        position: auto;
+        height: 100%;
+    }
+}

@@ -30,7 +30,7 @@
     <script src="./js/mini_backend.js"></script>
     <script src="./js/register.js"></script>
     <script src="./js/contacts.js"></script>
-    
+
 
 </head>
 
@@ -127,7 +127,7 @@
                             </div>
                             <div id="assignedList" class="assignedList"></div>
                             <div class="circleContactsContainer" id="circleContactsContainer"></div>
-                            
+
 
                         </div>
                     </div>
@@ -157,9 +157,15 @@
             </div>
 
             <div class="buttonsContainer">
+                <button class="clearButton" id="clearButton" onmouseover="clearBtnhover()"
+                    onmouseout="clearBtnCancelhover()" onclick="clearAllAddTaskFields()"
+                    onmousedown="setClearBtnOnActive()" onmouseup="clearBtnhover()">Clear <img class="clearBtnImg"
+                        id="clearBtnImg" src="assets/img/cross-mark.svg">
+                </button>
 
                 <button class="createButton" type="submit" id="addTaskBtn">Create Task
-                    <img class="createBtnImg" src="assets/img/right-mark.png"></button>
+                    <img class="createBtnImg" src="assets/img/right-mark.png">
+                </button>
             </div>
 
             <div id="messageAddedTask" class="messageAddedTask">
@@ -175,19 +181,10 @@
             </div>
         </form>
 
-
-        <button class="clearButton" id="clearButton" onmouseover="clearBtnhover()" onmouseout="clearBtnCancelhover()"
-            onclick="clearAllAddTaskFields()" onmousedown="setClearBtnOnActive()" onmouseup="clearBtnhover()">Clear <img
-                class="clearBtnImg" id="clearBtnImg" src="assets/img/cross-mark.svg">
-        </button>
-
-
-       
-
         <div w3-include-html="invitePopUp.html"></div>
     </div>
 
-    <div id="bg" style="display: none;"></div> 
+    <div id="bg" style="display: none;"></div>
 </body>
 
 
