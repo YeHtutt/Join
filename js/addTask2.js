@@ -90,6 +90,7 @@ function chooseCategory(index, category, color) {
     document.getElementById('color').style.background = color;
     document.getElementById('newCategoryInput').style.display = "none";
     document.getElementById('buttonDropDown').style.display = "flex";
+    closeDropdownCategory();
 }
 
 

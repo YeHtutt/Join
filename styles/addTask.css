@@ -148,7 +148,6 @@ textarea {
     box-sizing: border-box;
     height: 61px;
     display: flex;
-    /* justify-content: flex-start; */
     gap: 25px;
     margin-top: 160px;
     z-index: 2;
@@ -169,9 +168,6 @@ textarea {
     display: flex;
     align-items: center;
     justify-content: space-evenly;
-    /* position: absolute;
-    left: 970px;
-    top: 848px; */
 }
 
 .clearButton:hover {
@@ -374,7 +370,6 @@ textarea {
     border: 1px solid #D1D1D1;
     border-top: none;
     border-radius: 0 0 10px 10px;
-    /* top-left top-right bottom-right bottom-left */
     overflow-y: auto;
     padding-left: 18px;
 }
