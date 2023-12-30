@@ -85,10 +85,9 @@ h3 {
 
 
 .header {
-    position: absolute;
+    position: fixed;
+    margin-left: 230px;
     top: -4px;
-    right: 0px;
-    left: 230px;
     box-sizing: border-box;
     display: flex;
     justify-content: space-between;
@@ -99,7 +98,7 @@ h3 {
     background: #FFFFFF;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.1);
     z-index: 10;
-    max-width: 1440px;
+    width: 1210px;
 }
 
 .profile-container {
@@ -125,7 +124,8 @@ h3 {
 }
 
 .side-bar {
-    position: absolute;
+    position: fixed;
+    top: 0;
     box-sizing: border-box;
     display: flex;
     flex-direction: column;
@@ -133,9 +133,6 @@ h3 {
     justify-content: space-between;
     padding-top: 66px;
     width: 230px;
-    left: 0px;
-    top: 0px;
-    bottom: 0px;
     background: #2A3647;
     box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.1);
     z-index: 2;
@@ -225,6 +222,24 @@ h3 {
     display: none;
 }
 
+
+@media(max-width: 1440px) {
+    .side-bar {
+        bottom: 0px;
+    }
+
+    .header {
+        right: 0px;
+        left: 230px;
+        margin-left: 0;
+
+        width: unset;
+    }
+}
+
+
+
+
 @media(max-width:900px) {
     .header {
         position: fixed;
@@ -239,7 +254,8 @@ h3 {
         height: 79.02px;
         z-index: 10;
         box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.1);
-
+        
+        width: unset;
     }
 
     .profile-container {
@@ -256,6 +272,7 @@ h3 {
 
     .side-bar {
         position: fixed;
+        left: 0;
         height: 80px;
         width: 100%;
         top: auto;
@@ -342,25 +359,31 @@ h3 {
 }
 
 /* Nest Hub CSS */
-@media only screen and (width: 1024px) and (height: 600px) { 
-    .header, .side-bar {
+@media only screen and (width: 1024px) and (height: 600px) {
+
+    .header,
+    .side-bar {
         position: fixed;
     }
 }
 
 /* Nest Hub Max CSS */
-@media only screen and (width: 1280px) and (height: 800px) { 
-    .header, .side-bar {
+@media only screen and (width: 1280px) and (height: 800px) {
+
+    .header,
+    .side-bar {
         position: fixed;
     }
 }
 
 /* Surface Duo CSS */
-@media only screen and (width: 540px) and (height: 720px) { 
-    .header, .side-bar {
+@media only screen and (width: 540px) and (height: 720px) {
+
+    .header,
+    .side-bar {
         position: fixed;
     }
-} 
+}
 
 @media(max-height: 860px) {
     body {

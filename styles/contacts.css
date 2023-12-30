@@ -31,10 +31,11 @@ a {
 .animate-contact {animation: 4s fadeOut ease-in-out;}
 
 .desktop {
-    margin-left: 230px;
     background: #F5F5F5;
     display: flex;
     width: 100%;
+    height: 100%;
+    position: relative;
 }
 
 #bg {
@@ -48,6 +49,9 @@ a {
 }
 
 .big-container {
+    position: absolute;
+    top: 0;
+    left: 230px;
     display: flex;
 }
 
