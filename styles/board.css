@@ -172,7 +172,7 @@ h2 {
 }
 
 .dragging {
-    transform: rotate(15deg);
+    transform: rotate(3deg);
     transition: all 125ms;
 }
 
