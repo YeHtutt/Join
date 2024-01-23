@@ -41,10 +41,6 @@ function chooseContact(name) {
         }
         displayChosenContactsForTask();
     }
-    setTimeout(()=> {
-        closeDropDownAssignTo()
-    }, 100);
-    
 }
 
 /**
