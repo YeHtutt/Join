@@ -20,7 +20,7 @@ The team or individual can be assigned to individual tasks, each of which is rep
 ## Features
 
 - A pure `vanilla Javascript` project
-- Can displays Tasks Stages and Deadline on Summary Page
+- Can display Tasks Stages and Deadline on Summary Page
 - Task Board with draggable Task-cards
 - AddTask Page and AddTask Popout to add the Tasks to board
 - The Contact Page for maintain contacts or assign them with task 
