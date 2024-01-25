@@ -5,12 +5,12 @@ A task management tool based on Kanban principle.
 
 ## Table of contents
 
-- [Project description](#Projektdescription )
+- [Project description](#Projekt_description )
 - [Features](#features)
 - [Installation](#installation)
 
 
-## Project description
+## Project_description
 
 Join is a visual system based on the Kanban principle. It can be used in the production or development process.
 The team or individual can be assigned to individual tasks, each of which is represented by a card with a coloured task heading. The person can take on the tasks and move through the various stages from `ToDo` to `Done`. Once the task is completed, the person or the team can mark the task as `Done` and begin the new task. This browser app can take over these functions and greatly increases the productivity of the team in projects or organizations.
